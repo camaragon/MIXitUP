@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-profile {
+    display: flex;
+}
+
+.user-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 60%;
+    border: solid 3px black;
+}
