@@ -11,7 +11,7 @@ class App extends Component {
 
   render = () => {
     return (
-      <h1>Header</h1>
+      <Header />
     )
 
   };
