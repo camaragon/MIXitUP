@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from '../Header/Header';
 import Sidebar from '../Sidebar/Sidebar';
+import Main from '../Main/Main';
 
 class App extends Component {
   constructor() {
@@ -16,6 +17,7 @@ class App extends Component {
       <>
         <Header />
         <Sidebar />
+        <Main />
       </>
     )
 
