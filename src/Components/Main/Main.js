@@ -4,7 +4,10 @@ const Main = () => {
     return (
         <main className='main'>
             <h3 className='bartend-tips'>Bartender Tip</h3>
-            <button>Click Me</button>
+            <div className='button-container'>
+                <button>Reccomended Tools</button>
+                <button>Generate a Cocktail</button>
+            </div>
         </main>
     )
 }
