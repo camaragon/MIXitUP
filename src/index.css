@@ -10,13 +10,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/* code {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: white;
+} */
 
 * {
-  border: solid 1px red;
+  /* border: solid 1px red; */
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: white;
 }
 
 .container {
@@ -28,4 +30,5 @@ code {
   "sidebar main"
   "sidebar main";
   height: 100vh;
+  background-color: #1A1A1A;
 }
