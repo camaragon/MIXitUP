@@ -9,18 +9,26 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-
+      cocktail: []
     }
-    console.log(getCrops())
+    
   }
 
+
+  generateCocktail = () => {
+    getRandomCocktail()
+    .then(random => {
+      this.setState({cocktail: random})
+    })
+    console.log(this.state.cocktail)
+  }
 
   render = () => {
     return (
       <>
         <Header />
         <Sidebar />
-        <Main />
+        <Main generateCocktail={this.generateCocktail}/>
       </>
     )
 
