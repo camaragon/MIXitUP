@@ -2,6 +2,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    grid-area: header;
+    
 }
 
 .user-profile {
