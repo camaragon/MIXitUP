@@ -9,7 +9,7 @@ const Header = () => {
                 <div className='user-info'>
                     <p>Bartender Name</p>
                     <p>Bartender Level</p>
-                    <progress value='1' max='3'/>
+                    <progress value='' max='3'/>
                 </div>
             </div>
             <h1> MIXitUP</h1>

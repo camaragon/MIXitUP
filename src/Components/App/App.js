@@ -32,7 +32,6 @@ class App extends Component {
     } else {
       alert('Already made that drink!')
     }
-    // this.setState({ madeDrinks: this.state.madeDrinks.flat(1)})
     console.log(this.state.madeDrinks)
   }
 
