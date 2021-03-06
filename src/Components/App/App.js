@@ -9,7 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      cocktail: []
+      cocktail: null
     }
     
   }
@@ -18,7 +18,7 @@ class App extends Component {
   generateCocktail = () => {
     getRandomCocktail()
     .then(random => {
-      this.setState({cocktail: random})
+      this.setState({cocktail: random.drinks})
     })
     console.log(this.state.cocktail)
   }
@@ -28,7 +28,7 @@ class App extends Component {
       <>
         <Header />
         <Sidebar />
-        <Main generateCocktail={this.generateCocktail}/>
+        <Main generateCocktail={this.generateCocktail} cocktail={this.state.cocktail}/>
       </>
     )
 
