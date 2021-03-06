@@ -37,7 +37,16 @@ class App extends Component {
           </>
           )
         }}/>
-        <Route path='/:id' render= { ( {match} ) => <Recipe />} />
+        <Route path='/:id' render= { ( {match} ) => {
+        <Recipe 
+        name={this.state.cocktail[0].strDrink}
+        category={this.state.cocktail[0].strCategory}
+        glass={this.state.cocktail[0].strGlass}
+        image={this.state.cocktail[0].strDrinkThumb}
+        instructions={this.state.cocktail[0].strInstructions}
+        ingredients={this.state.cocktail[0].strIngredient1 ? [`${this.state.cocktail[0].strIngredient1} - ${this.state.cocktail[0].strMeasure1}`, `${this.state.cocktail[0].strIngredient2} - ${this.state.cocktail[0].strMeasure2}`, `${this.state.cocktail[0].strIngredient3} - ${this.state.cocktail[0].strMeasure3}`, `${this.state.cocktail[0].strIngredient4} - ${this.state.cocktail[0].strMeasure4}`, `${this.state.cocktail[0].strIngredient5} - ${this.state.cocktail[0].strMeasure5}`, `${this.state.cocktail[0].strIngredient6} - ${this.state.cocktail[0].strMeasure6}`] : this.state.cocktail[0].strIngredients}
+        />}} 
+        />
       </> 
     )
 

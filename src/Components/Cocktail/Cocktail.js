@@ -17,6 +17,7 @@ const Cocktail = ({cocktail, name, category, image, id}) => {
                 </Link>
             </div>
         </div> 
+    )
 }
 
 export default Cocktail;
