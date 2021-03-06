@@ -11,11 +11,10 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      cocktail: null
+      cocktail: null,
+      madeDrinks: []
     }
-    
   }
-
 
   generateCocktail = () => {
     getRandomCocktail()
