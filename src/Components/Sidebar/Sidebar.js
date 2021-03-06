@@ -5,7 +5,7 @@ const Sidebar = ({drinks}) => {
     const madeDrinkCards = drinks.map(drink => {
         console.log(drink)
         return ( 
-            <div className='made-drink-card'>
+            <div className='made-drink-card' key={drink[0].idDrink}>
                 <h3>{drink[0].strDrink}</h3>
                 <img className='made-image' src={drink[0].strDrinkThumb}></img>
             </div>

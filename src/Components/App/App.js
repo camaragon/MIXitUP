@@ -25,7 +25,14 @@ class App extends Component {
   }
 
   makeDrink = () => {
-    this.setState({ madeDrinks: [...this.state.madeDrinks, this.state.cocktail] });
+    const madeIds = this.state.madeDrinks.map(each => each.map(drink => drink.idDrink));
+    console.log(madeIds)
+    if (!madeIds.flat().includes(this.state.cocktail[0].idDrink)) {
+      this.setState({ madeDrinks: [this.state.cocktail, ...this.state.madeDrinks] });
+    } else {
+      alert('Already made that drink!')
+    }
+    // this.setState({ madeDrinks: this.state.madeDrinks.flat(1)})
     console.log(this.state.madeDrinks)
   }
 
@@ -36,7 +43,7 @@ class App extends Component {
         <Route exact path='/' render={() => {
           return (
           <>
-            <Sidebar drinks={this.state.madeDrinks}/>
+            <Sidebar drinks={this.state.madeDrinks} />
             <Main generateCocktail={this.generateCocktail} cocktail={this.state.cocktail} makeDrink={this.makeDrink}/>
           </>
           )
