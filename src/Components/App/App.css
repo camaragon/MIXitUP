@@ -1,3 +1,15 @@
 /* .App {
   text-align: center;
 } */
+
+/* .main-display {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "sidebar main";
+    height: 100vh;
+    background-color: #1A1A1A;
+} */

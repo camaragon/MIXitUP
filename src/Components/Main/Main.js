@@ -7,7 +7,17 @@ const Main = ({generateCocktail, cocktail}) => {
             <div className='tip-container'>
                 <h3 className='bartend-tips'>* Bartender Tip *</h3>
             </div>
-            <Cocktail cocktail={cocktail}/>
+            {cocktail ?
+            <Cocktail 
+                name={cocktail[0].strDrink}
+                category={cocktail[0].strCategory}
+                image={cocktail[0].strDrinkThumb}
+                id={cocktail[0].idDrink}
+                cocktail={cocktail}
+            /> :
+            <div className='no-card'>
+                <p>Empty</p>
+            </div> }
             <div className='button-container'>
                 <button>Reccomended Tools</button>
                 <button onClick={generateCocktail}>Generate a Cocktail</button>
