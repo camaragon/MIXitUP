@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import Sidebar from '../Sidebar/Sidebar';
 import Main from '../Main/Main';
 import {getRandomCocktail} from '../../fetchRequests';
+import {Route} from 'react-router-dom';
 
 class App extends Component {
   constructor() {
