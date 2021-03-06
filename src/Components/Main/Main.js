@@ -4,7 +4,9 @@ import Cocktail from '../Cocktail/Cocktail';
 const Main = ({generateCocktail, cocktail}) => {
     return (
         <main className='main'>
-            <h3 className='bartend-tips'>Bartender Tip</h3>
+            <div className='tip-container'>
+                <h3 className='bartend-tips'>* Bartender Tip *</h3>
+            </div>
             <Cocktail cocktail={cocktail}/>
             <div className='button-container'>
                 <button>Reccomended Tools</button>
