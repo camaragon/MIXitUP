@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import './Recipe.css';
 
 const Recipe = ({name, image, category, glass, instructions, ingredients}) => {
@@ -17,7 +18,9 @@ const Recipe = ({name, image, category, glass, instructions, ingredients}) => {
                     </ul> : 
                     <p>Ingredients: {ingredients}</p>}
                     <p>{instructions}</p>
-                    <button>Go Back</button>
+                    <Link to={'/'}>
+                        <button>Go Back</button>
+                    </Link>
             </div>
         </div>
     )
