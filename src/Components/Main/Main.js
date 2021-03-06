@@ -1,7 +1,7 @@
 import './Main.css';
 import Cocktail from '../Cocktail/Cocktail';
 
-const Main = ({generateCocktail, cocktail}) => {
+const Main = ({generateCocktail, cocktail, makeDrink}) => {
     return (
         <main className='main'>
             <div className='tip-container'>
@@ -14,6 +14,7 @@ const Main = ({generateCocktail, cocktail}) => {
                 image={cocktail[0].strDrinkThumb}
                 id={cocktail[0].idDrink}
                 cocktail={cocktail}
+                makeDrink={makeDrink}
             /> :
             <div className='no-card'>
                 <p>Empty</p>

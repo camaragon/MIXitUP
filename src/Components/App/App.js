@@ -24,6 +24,11 @@ class App extends Component {
     console.log(this.state.cocktail)
   }
 
+  makeDrink = () => {
+    this.setState({ madeDrinks: [...this.state.madeDrinks, this.state.cocktail] });
+    console.log(this.state.madeDrinks)
+  }
+
   render = () => {
     return (
       <>
@@ -32,7 +37,7 @@ class App extends Component {
           return (
           <>
             <Sidebar />
-            <Main generateCocktail={this.generateCocktail} cocktail={this.state.cocktail}/>
+            <Main generateCocktail={this.generateCocktail} cocktail={this.state.cocktail} makeDrink={this.makeDrink}/>
           </>
           )
         }}/>
