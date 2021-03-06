@@ -36,7 +36,7 @@ class App extends Component {
         <Route exact path='/' render={() => {
           return (
           <>
-            <Sidebar />
+            <Sidebar drinks={this.state.madeDrinks}/>
             <Main generateCocktail={this.generateCocktail} cocktail={this.state.cocktail} makeDrink={this.makeDrink}/>
           </>
           )
