@@ -3,8 +3,9 @@ import './App.css';
 import Header from '../Header/Header';
 import Sidebar from '../Sidebar/Sidebar';
 import Main from '../Main/Main';
+import Recipe from '../Recipe/Recipe';
 import {getRandomCocktail} from '../../fetchRequests';
-import {Route} from 'react-router-dom';
+import {Route} from 'react-router-dom';;
 
 class App extends Component {
   constructor() {
@@ -28,9 +29,16 @@ class App extends Component {
     return (
       <>
         <Header />
-        <Sidebar />
-        <Main generateCocktail={this.generateCocktail} cocktail={this.state.cocktail}/>
-      </>
+        <Route exact path='/' render={() => {
+          return (
+          <>
+            <Sidebar />
+            <Main generateCocktail={this.generateCocktail} cocktail={this.state.cocktail}/>
+          </>
+          )
+        }}/>
+        <Route path='/:id' render= { ( {match} ) => <Recipe />} />
+      </> 
     )
 
   };
