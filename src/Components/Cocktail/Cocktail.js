@@ -12,7 +12,9 @@ const Cocktail = ({cocktail}) => {
                     <h3>{cocktail[0].strDrink}</h3>
                     <p>{cocktail[0].strCategory}</p>
                 </div>
-                <button>Drink Recipe</button>
+                <Link to={`/${id}`} >
+                    <button>Drink Recipe</button>
+                </Link>
             </div>
         </div> : 
         <div className='no-card'>
