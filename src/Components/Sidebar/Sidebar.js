@@ -1,4 +1,5 @@
-import './Sidebar.css'
+import './Sidebar.css';
+import emptyImage from '../../Assets/empty.jpg';
 
 const Sidebar = ({drinks}) => {
     if (drinks.length) {
@@ -12,15 +13,21 @@ const Sidebar = ({drinks}) => {
     
             return (
                 <section>
-                    <h3 className='made-title'>Made Drinks</h3>
+                    <div className='glow-box'>
+                        <h3 className='made-title'>Made Drinks</h3>
+                    </div>
                     {madeDrinkCards}
                 </section>
             )
     } else {
         return (
             <section>
-                <h3 className='made-title'>Made Drinks</h3>
-                <h4>No drinks made yet!</h4>
+                <div className='glow-box'>
+                    <h3 className='made-title'>Made Drinks</h3>
+                </div>
+                <div className='no-drinks-card'>
+                    <img className='no-made-image' src={emptyImage}></img>
+                </div>
             </section>
         )
     }

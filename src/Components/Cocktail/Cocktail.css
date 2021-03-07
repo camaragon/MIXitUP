@@ -32,3 +32,12 @@
     flex-direction: column;
     align-items: center;
 }
+
+/* .stacked * {
+    color: #07F01E;
+} */
+
+.random-category {
+    margin-top: 0;
+
+}

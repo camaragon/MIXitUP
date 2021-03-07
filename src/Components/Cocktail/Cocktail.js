@@ -9,7 +9,7 @@ const Cocktail = ({cocktail, name, category, image, id, makeDrink}) => {
                 <button onClick={makeDrink}>Make Drink</button>
                 <div className='stacked'>
                     <h3>{name}</h3>
-                    <p>{category}</p>
+                    <p className='random-category'>{category}</p>
                 </div>
                 <Link to={`/${id}`} >
                     <button>Drink Recipe</button>

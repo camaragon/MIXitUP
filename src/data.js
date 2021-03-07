@@ -40,7 +40,6 @@ const tipsData = [
     'Always clean your tins after each drink',
     'Use a jigger',
     'Make a complex drink in batches'
-
 ]
 
 export {levelData, tipsData};
