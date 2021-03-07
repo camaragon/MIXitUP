@@ -33,7 +33,7 @@ const tipsData = [
     'Know How to Pour Alcohol',
     'Be an expert of drink recipes',
     'Be a professional',
-    'Know How to Talk to Your Customers, but Keep your conversations short',
+    'Know how to talk to your customers, but keep your conversations short',
     'Stay out of the way of other bartenders',
     'Develop your signature shake',
     'Smile and be friendly',
