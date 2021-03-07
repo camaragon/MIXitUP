@@ -1,6 +1,4 @@
-import react, {useState} from 'react';
 import './Header.css';
-import levelData from '../../data';
 import userImage from '../../Assets/user-profile.png';
 
 const Header = ({currentLevel, drinksMade}) => {
