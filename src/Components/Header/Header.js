@@ -1,12 +1,13 @@
 import react, {useState} from 'react';
 import './Header.css';
 import levelData from '../../data';
+import userImage from '../../Assets/user-profile.png';
 
 const Header = ({currentLevel, drinksMade}) => {
         return (   
             <header>
                 <div className='user-profile'>
-                    <img className='user-image' src='https://e7.pngegg.com/pngimages/448/589/png-clipart-bartender-pouring-alcoholic-beverage-in-martini-glass-cocktail-beer-bartender-illustration-cartoon-bartender-miscellaneous-cartoon-character.png'></img>
+                    <img className='user-image' src={userImage}></img>
                     {drinksMade.length % 3 === 0 && drinksMade.length  ?
                      <h4>You Leveled Up!</h4> :
                     <div className='user-info'>
