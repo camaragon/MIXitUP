@@ -19,7 +19,9 @@ const Sidebar = ({drinks}) => {
     } else {
         return (
             <section>
-                <h3 className='made-title'>Made Drinks</h3>
+                <div className='glow-box'>
+                    <h3 className='made-title'>Made Drinks</h3>
+                </div>
                 <div className='no-drinks-card'>
                     {/* <h4>No drinks made yet!</h4> */}
                     <img className='no-made-image' src='https://wallpaperaccess.com/full/1503601.jpg'></img>
