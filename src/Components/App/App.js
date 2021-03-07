@@ -5,15 +5,29 @@ import Sidebar from '../Sidebar/Sidebar';
 import Main from '../Main/Main';
 import Recipe from '../Recipe/Recipe';
 import {getRandomCocktail} from '../../fetchRequests';
-import {Route} from 'react-router-dom';;
+import {Route} from 'react-router-dom';
+import levelData from '../../data';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       cocktail: null,
-      madeDrinks: []
+      madeDrinks: [],
+      count: 1,
+      currentLevel: levelData[0],
+      levelUp: false
     }
+  }
+
+  componentDidUpdate = () => {
+    if (this.state.levelUp) {
+      this.setState({
+        count: this.setState.count + 1, 
+        currentLevel: levelData.find(level => level.id === this.state.count),
+        levelUp: false
+      });
+  }
   }
 
   generateCocktail = () => {
@@ -25,6 +39,9 @@ class App extends Component {
   }
 
   makeDrink = () => {
+    if (this.state.madeDrinks.flat().length % 3 === 0 && this.state.madeDrinks.length) {
+      this.setState({ levelUp: true});
+    }
     const madeIds = this.state.madeDrinks.map(each => each.map(drink => drink.idDrink));
     console.log(madeIds)
     if (!madeIds.flat().includes(this.state.cocktail[0].idDrink)) {
@@ -38,7 +55,7 @@ class App extends Component {
   render = () => {
     return (
       <>
-        <Header />
+        <Header currentLevel={this.state.currentLevel} drinksMade={this.state.madeDrinks.flat()}/>
         <Route exact path='/' render={() => {
           return (
           <>
