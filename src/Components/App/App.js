@@ -22,7 +22,6 @@ class App extends Component {
   }
 
   componentDidUpdate = () => {
-    
     if (this.state.levelUp) {
       this.setState({
         currentLevel: levelData.find(level => level.id === this.state.count),
