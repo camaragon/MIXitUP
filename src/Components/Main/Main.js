@@ -1,11 +1,11 @@
 import './Main.css';
 import Cocktail from '../Cocktail/Cocktail';
 
-const Main = ({generateCocktail, cocktail, makeDrink}) => {
+const Main = ({generateCocktail, cocktail, makeDrink, tip}) => {
     return (
         <main className='main'>
             <div className='tip-container'>
-                <h3 className='bartend-tips'>* Bartender Tip *</h3>
+                <h3 className='bartend-tips'>{tip}</h3>
             </div>
             {cocktail ?
             <Cocktail 
