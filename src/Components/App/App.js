@@ -22,33 +22,35 @@ class App extends Component {
 
   componentDidUpdate = () => {
     if (this.state.levelUp) {
+      
       this.setState({
-        count: this.setState.count + 1, 
+        // count: this.state.count + 1, 
         currentLevel: levelData.find(level => level.id === this.state.count),
         levelUp: false
       });
+    }
   }
-  }
+
+  componentDidMount
 
   generateCocktail = () => {
     getRandomCocktail()
     .then(random => {
       this.setState({cocktail: random.drinks})
     })
-    console.log(this.state.cocktail)
   }
 
   makeDrink = () => {
     if (this.state.madeDrinks.flat().length % 3 === 0 && this.state.madeDrinks.length) {
-      this.setState({ levelUp: true});
+      this.setState({ levelUp: true, count: this.state.count + 1});
     }
     const madeIds = this.state.madeDrinks.map(each => each.map(drink => drink.idDrink));
-    console.log(madeIds)
     if (!madeIds.flat().includes(this.state.cocktail[0].idDrink)) {
       this.setState({ madeDrinks: [this.state.cocktail, ...this.state.madeDrinks] });
     } else {
       alert('Already made that drink!')
     }
+    console.log(this.state.count)
     console.log(this.state.madeDrinks)
   }
 

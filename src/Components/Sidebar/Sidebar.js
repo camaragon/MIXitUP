@@ -1,9 +1,7 @@
 import './Sidebar.css'
 
 const Sidebar = ({drinks}) => {
-    console.log(drinks);
     const madeDrinkCards = drinks.map(drink => {
-        console.log(drink)
         return ( 
             <div className='made-drink-card' key={drink[0].idDrink}>
                 <h3>{drink[0].strDrink}</h3>
