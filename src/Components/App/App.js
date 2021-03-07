@@ -4,7 +4,6 @@ import Header from '../Header/Header';
 import Sidebar from '../Sidebar/Sidebar';
 import Main from '../Main/Main';
 import Recipe from '../Recipe/Recipe';
-import RecTools from '../RecTools/RecTools';
 import {getRandomCocktail} from '../../fetchRequests';
 import {Route} from 'react-router-dom';
 import {levelData, tipsData} from '../../data';
