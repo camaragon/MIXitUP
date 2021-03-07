@@ -1,11 +1,12 @@
 import './Main.css';
 import Cocktail from '../Cocktail/Cocktail';
+import flameImage from '../../Assets/flame-cocktail.jpg';
 
-const Main = ({generateCocktail, cocktail, makeDrink}) => {
+const Main = ({generateCocktail, cocktail, makeDrink, tip}) => {
     return (
         <main className='main'>
             <div className='tip-container'>
-                <h3 className='bartend-tips'>* Bartender Tip *</h3>
+                <h3 className='bartend-tips'>{tip}</h3>
             </div>
             {cocktail ?
             <Cocktail 
@@ -17,10 +18,12 @@ const Main = ({generateCocktail, cocktail, makeDrink}) => {
                 makeDrink={makeDrink}
             /> :
             <div className='no-card'>
-                <p>Empty</p>
+                <img className='flame-image' src={flameImage}></img>
             </div> }
             <div className='button-container'>
-                <button>Reccomended Tools</button>
+                <a href='https://mycustombottleopener.com/10-essential-bar-tools-that-every-bartender-should-have/' target="_blank" rel="noreferrer">
+                    <button>Recomended Tools</button>
+                </a>
                 <button onClick={generateCocktail}>Generate a Cocktail</button>
             </div>
         </main>

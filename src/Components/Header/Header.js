@@ -2,14 +2,7 @@ import react, {useState} from 'react';
 import './Header.css';
 import levelData from '../../data';
 
-const Header = ({currentLevel, drinksMade, count}) => {
-    // const [count, setCount] = useState(1);
-    // console.log(count)
-    // if (drinksMade.length % 3 === 0 && drinksMade.length) {
-    //     setCount(count + 1);
-    // }
-    // const currentLevel = levelData.find(level => level.id === count);
-    console.log(currentLevel)
+const Header = ({currentLevel, drinksMade}) => {
         return (   
             <header>
                 <div className='user-profile'>

@@ -48,3 +48,23 @@ button:hover {
     box-shadow:  20px 20px 40px #0f0f0f,
              -20px -20px 40px #252525;
   }
+
+  .no-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 370px;
+    width: 500px;
+    /* border: 1px solid; */
+    /* border-radius: 10px; */
+    border-radius: 50px;
+    background: #1A1A1A;
+    box-shadow:  35px 35px 10px #0d0d0d,
+             -35px -10px 20px #272727;
+  }
+
+  .flame-image {
+      height: 100%;
+      width: 100%;
+      border-radius: 50px;
+  }
