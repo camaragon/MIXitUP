@@ -46,7 +46,7 @@ class App extends Component {
     if (!madeIds.flat().includes(this.state.cocktail[0].idDrink)) {
       this.setState({ madeDrinks: [this.state.cocktail, ...this.state.madeDrinks]});
     } else {
-      alert('Already made that drink!')
+      alert('You already made that drink!')
     }
   }
 
