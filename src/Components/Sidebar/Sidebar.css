@@ -2,7 +2,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     grid-area: sidebar;
     border-right: solid 3px #C600FF;
     overflow: auto;
@@ -17,12 +17,13 @@ section {
     flex-direction: column;
     align-items: center;
     height: 300px;
-    width: 75%;
+    width: 70%;
     border-radius: 50px;
     background: #1A1A1A;
     box-shadow:  35px 35px 10px #0d0d0d,
              -35px -10px 20px #272727;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
 
 .made-image {
@@ -48,5 +49,9 @@ section {
     box-shadow:  35px 35px 10px #0d0d0d,
              -35px -10px 20px #272727;
     /* margin-bottom: 10%; */
-    /* margin-top: 5%; */
+    margin-top: 5%;
+}
+
+.glow-box{
+    margin-top: 3%;
 }

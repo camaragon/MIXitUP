@@ -12,7 +12,9 @@ const Sidebar = ({drinks}) => {
     
             return (
                 <section>
-                    <h3 className='made-title'>Made Drinks</h3>
+                    <div className='glow-box'>
+                        <h3 className='made-title'>Made Drinks</h3>
+                    </div>
                     {madeDrinkCards}
                 </section>
             )
