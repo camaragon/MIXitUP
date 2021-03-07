@@ -16,7 +16,13 @@ const Header = ({currentLevel, drinksMade}) => {
                     }
                 </div>
                 <h1>MIX it UP</h1>
-                <h3 className='header-quote'>Level Up Your Bartending Skills!</h3>     
+                <h4 className='header-quote'>
+                    Level Up Your Bartending Skills! 
+                <br></br>
+                    For every 3 drinks made you level up!
+                <br></br>
+                    Only select Make Drink if you really made the drink!
+                </h4>     
             </header>
         )
 }
