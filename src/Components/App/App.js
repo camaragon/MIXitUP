@@ -22,7 +22,6 @@ class App extends Component {
 
   componentDidUpdate = () => {
     if (this.state.levelUp) {
-      
       this.setState({
         // count: this.state.count + 1, 
         currentLevel: levelData.find(level => level.id === this.state.count),
@@ -30,8 +29,6 @@ class App extends Component {
       });
     }
   }
-
-  componentDidMount
 
   generateCocktail = () => {
     getRandomCocktail()
@@ -57,7 +54,7 @@ class App extends Component {
   render = () => {
     return (
       <>
-        <Header currentLevel={this.state.currentLevel} drinksMade={this.state.madeDrinks.flat()}/>
+        <Header currentLevel={this.state.currentLevel} drinksMade={this.state.madeDrinks.flat()} count={this.state.count}/>
         <Route exact path='/' render={() => {
           return (
           <>

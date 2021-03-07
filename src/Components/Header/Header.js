@@ -2,7 +2,7 @@ import react, {useState} from 'react';
 import './Header.css';
 import levelData from '../../data';
 
-const Header = ({currentLevel, drinksMade}) => {
+const Header = ({currentLevel, drinksMade, count}) => {
     // const [count, setCount] = useState(1);
     // console.log(count)
     // if (drinksMade.length % 3 === 0 && drinksMade.length) {
@@ -14,7 +14,8 @@ const Header = ({currentLevel, drinksMade}) => {
             <header>
                 <div className='user-profile'>
                     <img className='user-image' src='https://e7.pngegg.com/pngimages/448/589/png-clipart-bartender-pouring-alcoholic-beverage-in-martini-glass-cocktail-beer-bartender-illustration-cartoon-bartender-miscellaneous-cartoon-character.png'></img>
-                    {currentLevel &&
+                    {drinksMade.length % 3 === 0 && drinksMade.length  ?
+                     <h4>You Leveled Up!</h4> :
                     <div className='user-info'>
                         <p>Bartender Name</p>
                         <p>{currentLevel.levelName}</p>
