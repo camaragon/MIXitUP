@@ -45,6 +45,6 @@ button:hover {
     width: auto;
     border-radius: 50px;
     background: linear-gradient(145deg, #171717, #1c1c1c);
-box-shadow:  20px 20px 40px #0f0f0f,
+    box-shadow:  20px 20px 40px #0f0f0f,
              -20px -20px 40px #252525;
   }

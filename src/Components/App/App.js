@@ -5,35 +5,61 @@ import Sidebar from '../Sidebar/Sidebar';
 import Main from '../Main/Main';
 import Recipe from '../Recipe/Recipe';
 import {getRandomCocktail} from '../../fetchRequests';
-import {Route} from 'react-router-dom';;
+import {Route} from 'react-router-dom';
+import levelData from '../../data';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      cocktail: null
+      cocktail: null,
+      madeDrinks: [],
+      count: 1,
+      currentLevel: levelData[0],
+      levelUp: false
     }
-    
   }
 
+  componentDidUpdate = () => {
+    if (this.state.levelUp) {
+      this.setState({
+        // count: this.state.count + 1, 
+        currentLevel: levelData.find(level => level.id === this.state.count),
+        levelUp: false
+      });
+    }
+  }
 
   generateCocktail = () => {
     getRandomCocktail()
     .then(random => {
       this.setState({cocktail: random.drinks})
     })
-    console.log(this.state.cocktail)
+  }
+
+  makeDrink = () => {
+    if (this.state.madeDrinks.flat().length % 3 === 0 && this.state.madeDrinks.length) {
+      this.setState({ levelUp: true, count: this.state.count + 1});
+    }
+    const madeIds = this.state.madeDrinks.map(each => each.map(drink => drink.idDrink));
+    if (!madeIds.flat().includes(this.state.cocktail[0].idDrink)) {
+      this.setState({ madeDrinks: [this.state.cocktail, ...this.state.madeDrinks] });
+    } else {
+      alert('Already made that drink!')
+    }
+    console.log(this.state.count)
+    console.log(this.state.madeDrinks)
   }
 
   render = () => {
     return (
       <>
-        <Header />
+        <Header currentLevel={this.state.currentLevel} drinksMade={this.state.madeDrinks.flat()} count={this.state.count}/>
         <Route exact path='/' render={() => {
           return (
           <>
-            <Sidebar />
-            <Main generateCocktail={this.generateCocktail} cocktail={this.state.cocktail}/>
+            <Sidebar drinks={this.state.madeDrinks} />
+            <Main generateCocktail={this.generateCocktail} cocktail={this.state.cocktail} makeDrink={this.makeDrink}/>
           </>
           )
         }}/>
