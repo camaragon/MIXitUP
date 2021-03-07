@@ -61,7 +61,7 @@ progress {
 
 h1 {
     color: #07F01E;
-    font-size: 100px;
+    font-size: 6rem;
     margin-bottom: 0;
     margin-top: 2%;
     /* box-shadow: 20px 20px 50px #00d2c6, 
@@ -70,7 +70,7 @@ h1 {
 
 .header-quote {
     color: #0CF1FA;
-    
+    margin-right: 5%;
 }
 
 
