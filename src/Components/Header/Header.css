@@ -61,12 +61,16 @@ progress {
 
 h1 {
     color: #07F01E;
+    font-size: 100px;
+    margin-bottom: 0;
+    margin-top: 2%;
     /* box-shadow: 20px 20px 50px #00d2c6, 
             -30px -30px 60px #00ffff; */
 }
 
 .header-quote {
     color: #0CF1FA;
+    
 }
 
 
