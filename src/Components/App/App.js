@@ -6,7 +6,7 @@ import Main from '../Main/Main';
 import Recipe from '../Recipe/Recipe';
 import {getRandomCocktail} from '../../fetchRequests';
 import {Route} from 'react-router-dom';
-import levelData from '../../data';
+import {levelData} from '../../data';
 
 class App extends Component {
   constructor() {

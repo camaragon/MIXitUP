@@ -26,4 +26,21 @@ const levelData = [
     }
 ]
 
-export default levelData;
+const tips = [
+    'There is always more to do behind the bar',
+    'Glass Will Break, Drinks Will Spill',
+    'Keep the Bar Clean',
+    'Know How to Pour Alcohol',
+    'Be an expert of drink recipes',
+    'Be a professional',
+    'Know How to Talk to Your Customers, but Keep your conversations short',
+    'Stay out of the way of other bartenders',
+    'Develop your signature shake',
+    'Smile and be friendly',
+    'Always clean your tins after each drink',
+    'Use a jigger',
+    'Make a complex drink in batches'
+
+]
+
+export {levelData, tips};
