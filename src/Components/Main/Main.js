@@ -1,5 +1,6 @@
 import './Main.css';
 import Cocktail from '../Cocktail/Cocktail';
+import flameImage from '../../Assets/flame-cocktail.jpg';
 
 const Main = ({generateCocktail, cocktail, makeDrink, tip}) => {
     return (
@@ -17,7 +18,7 @@ const Main = ({generateCocktail, cocktail, makeDrink, tip}) => {
                 makeDrink={makeDrink}
             /> :
             <div className='no-card'>
-                <p>Empty</p>
+                <img className='flame-image' src={flameImage}></img>
             </div> }
             <div className='button-container'>
                 <button>Reccomended Tools</button>

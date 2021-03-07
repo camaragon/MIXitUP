@@ -53,12 +53,18 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 500px;
     /* border: 1px solid; */
     /* border-radius: 10px; */
     border-radius: 50px;
     background: #1A1A1A;
     box-shadow:  35px 35px 10px #0d0d0d,
              -35px -10px 20px #272727;
+  }
+
+  .flame-image {
+      height: 100%;
+      width: 100%;
+      border-radius: 50px;
   }
