@@ -16,8 +16,8 @@ const Header = ({currentLevel, drinksMade}) => {
                     </div>
                     }
                 </div>
-                    <h1>MIXitUP</h1>
-                    <h3 className='header-quote'>Level Up Your Bartending Skills!</h3>
+                <h1>MIXitUP</h1>
+                <h3 className='header-quote'>Level Up Your Bartending Skills!</h3>     
             </header>
         )
 }

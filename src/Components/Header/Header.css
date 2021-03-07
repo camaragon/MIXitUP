@@ -7,12 +7,20 @@ header {
 }
 
 header p{
-    color: #00d2c6;
+    color: #0CF1FA;
 }
 
 
 .user-profile {
     display: flex;
+    margin-left: 5%;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .user-image {
@@ -22,6 +30,35 @@ header p{
     border: solid 3px #C600FF;
 }
 
+progress {
+    border: none;
+    /* width: 400px;
+    height: 60px; */
+    border: 1px solid #C600FF;
+    background: #0CF1FA;
+  }
+  
+  progress {
+    color: lightblue;
+  }
+  
+  progress::-webkit-progress-value {
+    background: lightblue;
+  }
+  
+  progress::-moz-progress-bar {
+    background: lightcolor;
+  }
+  
+  progress::-webkit-progress-value {
+    background: #0CF1FA;
+  }
+  
+  progress::-webkit-progress-bar {
+    background: black;
+  }
+
+
 h1 {
     color: #07F01E;
     /* box-shadow: 20px 20px 50px #00d2c6, 
@@ -29,6 +66,8 @@ h1 {
 }
 
 .header-quote {
-    color: #00d2c6;   
+    color: #0CF1FA;
 }
+
+
 

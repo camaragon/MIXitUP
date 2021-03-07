@@ -5,7 +5,7 @@ import flameImage from '../../Assets/flame-cocktail.jpg';
 const Main = ({generateCocktail, cocktail, makeDrink, tip}) => {
     return (
         <main className='main'>
-            <div className='tip-container'>
+            <div className='glow-box'>
                 <h3 className='bartend-tips'>{tip}</h3>
             </div>
             {cocktail ?
