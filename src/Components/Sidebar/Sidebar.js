@@ -20,7 +20,10 @@ const Sidebar = ({drinks}) => {
         return (
             <section>
                 <h3 className='made-title'>Made Drinks</h3>
-                <h4>No drinks made yet!</h4>
+                <div className='no-drinks-card'>
+                    {/* <h4>No drinks made yet!</h4> */}
+                    <img className='no-made-image' src='https://wallpaperaccess.com/full/1503601.jpg'></img>
+                </div>
             </section>
         )
     }
