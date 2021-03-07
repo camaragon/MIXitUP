@@ -1,6 +1,7 @@
 import './Main.css';
 import Cocktail from '../Cocktail/Cocktail';
 import flameImage from '../../Assets/flame-cocktail.jpg';
+import {Link} from 'react-router-dom';
 
 const Main = ({generateCocktail, cocktail, makeDrink, tip}) => {
     return (
@@ -21,8 +22,10 @@ const Main = ({generateCocktail, cocktail, makeDrink, tip}) => {
                 <img className='flame-image' src={flameImage}></img>
             </div> }
             <div className='button-container'>
-                <button>Reccomended Tools</button>
-                <button onClick={generateCocktail}>Generate a Cocktail</button>
+                <Link to={'/recommended-tools'}>
+                    <button>Recomended Tools</button>
+                </Link>
+                    <button onClick={generateCocktail}>Generate a Cocktail</button>
             </div>
         </main>
     )
