@@ -6,7 +6,7 @@ import Main from '../Main/Main';
 import Recipe from '../Recipe/Recipe';
 import {getRandomCocktail} from '../../fetchRequests';
 import {Route} from 'react-router-dom';
-import {levelData} from '../../data';
+import {levelData, tipsData} from '../../data';
 
 class App extends Component {
   constructor() {
@@ -14,6 +14,7 @@ class App extends Component {
     this.state = {
       cocktail: null,
       madeDrinks: [],
+      tip: tipsData[Math.floor(Math.random() * tipsData.length)],
       count: 1,
       currentLevel: levelData[0],
       levelUp: false
@@ -21,19 +22,20 @@ class App extends Component {
   }
 
   componentDidUpdate = () => {
+    
     if (this.state.levelUp) {
       this.setState({
-        // count: this.state.count + 1, 
         currentLevel: levelData.find(level => level.id === this.state.count),
         levelUp: false
       });
     }
+    console.log(this.state.tip)
   }
 
   generateCocktail = () => {
     getRandomCocktail()
     .then(random => {
-      this.setState({cocktail: random.drinks})
+      this.setState({cocktail: random.drinks, tip: tipsData[Math.floor(Math.random() * tipsData.length)]})
     })
   }
 
@@ -43,23 +45,21 @@ class App extends Component {
     }
     const madeIds = this.state.madeDrinks.map(each => each.map(drink => drink.idDrink));
     if (!madeIds.flat().includes(this.state.cocktail[0].idDrink)) {
-      this.setState({ madeDrinks: [this.state.cocktail, ...this.state.madeDrinks] });
+      this.setState({ madeDrinks: [this.state.cocktail, ...this.state.madeDrinks]});
     } else {
       alert('Already made that drink!')
     }
-    console.log(this.state.count)
-    console.log(this.state.madeDrinks)
   }
 
   render = () => {
     return (
       <>
-        <Header currentLevel={this.state.currentLevel} drinksMade={this.state.madeDrinks.flat()} count={this.state.count}/>
+        <Header currentLevel={this.state.currentLevel} drinksMade={this.state.madeDrinks.flat()}/>
         <Route exact path='/' render={() => {
           return (
           <>
             <Sidebar drinks={this.state.madeDrinks} />
-            <Main generateCocktail={this.generateCocktail} cocktail={this.state.cocktail} makeDrink={this.makeDrink}/>
+            <Main generateCocktail={this.generateCocktail} cocktail={this.state.cocktail} makeDrink={this.makeDrink} tip={this.state.tip}/>
           </>
           )
         }}/>

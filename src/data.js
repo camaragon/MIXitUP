@@ -26,7 +26,7 @@ const levelData = [
     }
 ]
 
-const tips = [
+const tipsData = [
     'There is always more to do behind the bar',
     'Glass Will Break, Drinks Will Spill',
     'Keep the Bar Clean',
@@ -43,4 +43,4 @@ const tips = [
 
 ]
 
-export {levelData, tips};
+export {levelData, tipsData};
