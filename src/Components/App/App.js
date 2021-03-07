@@ -14,7 +14,7 @@ class App extends Component {
     this.state = {
       cocktail: null,
       madeDrinks: [],
-      tip: tipsData[Math.floor(Math.random() * tipsData.length)],
+      tip: 'Click Generate a Cocktail to get started!',
       count: 1,
       currentLevel: levelData[0],
       levelUp: false
