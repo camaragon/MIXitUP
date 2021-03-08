@@ -17,11 +17,15 @@ class App extends Component {
       tip: 'Click Generate a Cocktail to get started!',
       count: 1,
       currentLevel: levelData[0],
-      levelUp: false
+      levelUp: false,
+      sameDrink: false
     }
   }
 
   componentDidUpdate = () => {
+    if (this.state.madeDrinks.length === 15) {
+      window.location.reload(false);
+    }
     if (this.state.levelUp) {
       this.setState({
         currentLevel: levelData.find(level => level.id === this.state.count),
@@ -34,7 +38,7 @@ class App extends Component {
   generateCocktail = () => {
     getRandomCocktail()
     .then(random => {
-      this.setState({cocktail: random.drinks, tip: tipsData[Math.floor(Math.random() * tipsData.length)]})
+      this.setState({sameDrink: false, cocktail: random.drinks, tip: tipsData[Math.floor(Math.random() * tipsData.length)]})
     })
   }
 
@@ -46,19 +50,19 @@ class App extends Component {
     if (!madeIds.flat().includes(this.state.cocktail[0].idDrink)) {
       this.setState({ madeDrinks: [this.state.cocktail, ...this.state.madeDrinks]});
     } else {
-      alert('You already made that drink!')
+      this.setState({ sameDrink: true });
     }
   }
 
   render = () => {
     return (
       <>
-        <Header currentLevel={this.state.currentLevel} drinksMade={this.state.madeDrinks.flat()}/>
+        <Header currentLevel={this.state.currentLevel} drinksMade={this.state.madeDrinks.flat()} levelNum={this.state.count}/>
         <Route exact path='/' render={() => {
           return (
           <>
             <Sidebar drinks={this.state.madeDrinks} />
-            <Main generateCocktail={this.generateCocktail} cocktail={this.state.cocktail} makeDrink={this.makeDrink} tip={this.state.tip}/>
+            <Main generateCocktail={this.generateCocktail} cocktail={this.state.cocktail} makeDrink={this.makeDrink} tip={this.state.tip} sameDrink={this.state.sameDrink}/>
           </>
           )
         }}/>

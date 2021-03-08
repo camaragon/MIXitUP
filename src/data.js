@@ -1,22 +1,22 @@
 const levelData = [
     {
         id: 1,
-        levelName: 'Noob',
+        levelName: 'Newbie',
         drinkReqs: [0, 1, 2, 3]
     },
     {
         id: 2,
-        levelName: 'Bar-back',
+        levelName: 'Alcoholic',
         drinkReqs: [0, 1, 2, 3]
     },
     {
         id: 3,
-        levelName: 'Level 3',
+        levelName: 'Liquor Dealer',
         drinkReqs: [0, 1, 2, 3]
     },
     {
         id: 4,
-        levelName: 'Level 4',
+        levelName: 'Liquid Chef',
         drinkReqs: [0, 1, 2, 3]
     },
     {

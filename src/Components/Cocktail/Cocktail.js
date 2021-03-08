@@ -6,13 +6,13 @@ const Cocktail = ({cocktail, name, category, image, id, makeDrink}) => {
         <div className='cocktail-card'>
             <img className='cocktail-image' src={image}></img>
             <div className='horizontal'>
-                <button onClick={makeDrink}>Make Drink</button>
+                <button className='make-drink-btn' onClick={makeDrink}>Make Drink</button>
                 <div className='stacked'>
                     <h3>{name}</h3>
                     <p className='random-category'>{category}</p>
                 </div>
                 <Link to={`/${id}`} >
-                    <button>Drink Recipe</button>
+                    <button className='drink-recipe-btn'>Drink Recipe</button>
                 </Link>
             </div>
         </div> 
