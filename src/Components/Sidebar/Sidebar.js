@@ -7,7 +7,7 @@ const Sidebar = ({drinks}) => {
             return ( 
                 <div className='made-drink-card' key={drink[0].idDrink}>
                     <h3>{drink[0].strDrink}</h3>
-                    <img className='made-image' src={drink[0].strDrinkThumb}></img>
+                    <img className='made-image' src={drink[0].strDrinkThumb} alt={`image of a ${drink[0].strDrink} cocktail`}></img>
                 </div>
             )})
     
