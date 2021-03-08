@@ -7,6 +7,7 @@ import Recipe from '../Recipe/Recipe';
 import {getRandomCocktail} from '../../fetchRequests';
 import {Route} from 'react-router-dom';
 import {levelData, tipsData} from '../../data';
+import ls from 'local-storage';
 
 class App extends Component {
   constructor() {
@@ -15,11 +16,20 @@ class App extends Component {
       cocktail: null,
       madeDrinks: [],
       tip: 'Click Generate a Cocktail to get started!',
-      count: 1,
+      levelNum: 1,
       currentLevel: levelData[0],
       levelUp: false,
       sameDrink: false
     }
+  }
+
+  componentDidMount = () => {
+    this.setState({
+      madeDrinks: ls.get('madeDrinks') || [],
+      levelNum: ls.get('levelNum') || 1,
+      currentLevel: ls.get('currentLevel') || levelData[0],
+      levelUp: ls.get('levelUp') || false
+    })
   }
 
   componentDidUpdate = () => {
@@ -28,7 +38,7 @@ class App extends Component {
     }
     if (this.state.levelUp) {
       this.setState({
-        currentLevel: levelData.find(level => level.id === this.state.count),
+        currentLevel: levelData.find(level => level.id === this.state.levelNum),
         levelUp: false
       });
     }
@@ -44,7 +54,7 @@ class App extends Component {
 
   makeDrink = () => {
     if (this.state.madeDrinks.flat().length % 3 === 0 && this.state.madeDrinks.length) {
-      this.setState({ levelUp: true, count: this.state.count + 1});
+      this.setState({ levelUp: true, levelNum: this.state.levelNum + 1});
     }
     const madeIds = this.state.madeDrinks.map(each => each.map(drink => drink.idDrink));
     if (!madeIds.flat().includes(this.state.cocktail[0].idDrink)) {
@@ -57,7 +67,7 @@ class App extends Component {
   render = () => {
     return (
       <>
-        <Header currentLevel={this.state.currentLevel} drinksMade={this.state.madeDrinks.flat()} levelNum={this.state.count}/>
+        <Header currentLevel={this.state.currentLevel} drinksMade={this.state.madeDrinks.flat()} levelNum={this.state.levelNum}/>
         <Route exact path='/' render={() => {
           return (
           <>
