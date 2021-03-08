@@ -4,7 +4,7 @@ import './Recipe.css';
 const Recipe = ({name, image, category, glass, instructions, ingredients}) => {
     return (
         <div className='recipe'>
-            <img className='recipe-image' src={image}></img>
+            <img className='recipe-image' src={image} alt={`image of a ${name} cocktail`}></img>
             <div className='recipe-info'>
                 <h2 className='recipe-name'>{name}</h2>
                 <p className='recipe-category'>{category}</p>
