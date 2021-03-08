@@ -27,8 +27,7 @@ class App extends Component {
     this.setState({
       madeDrinks: ls.get('madeDrinks') || [],
       levelNum: ls.get('levelNum') || 1,
-      currentLevel: ls.get('currentLevel') || levelData[0],
-      levelUp: ls.get('levelUp') || false
+      currentLevel: ls.get('currentLevel') || levelData[0]
     })
   }
 
@@ -55,6 +54,7 @@ class App extends Component {
   makeDrink = () => {
     if (this.state.madeDrinks.flat().length % 3 === 0 && this.state.madeDrinks.length) {
       this.setState({ levelUp: true, levelNum: this.state.levelNum + 1});
+      ls.set('levelNum', this.state.levelNum + 1);
     }
     const madeIds = this.state.madeDrinks.map(each => each.map(drink => drink.idDrink));
     if (!madeIds.flat().includes(this.state.cocktail[0].idDrink)) {
