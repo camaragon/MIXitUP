@@ -13,7 +13,7 @@ const Sidebar = ({drinks}) => {
     
             return (
                 <section>
-                    <div className='glow-box'>
+                    <div className='glow-box' style={{ marginTop: '3%'}}>
                         <h3 className='made-title'>Made Drinks</h3>
                     </div>
                     {madeDrinkCards}
@@ -22,11 +22,13 @@ const Sidebar = ({drinks}) => {
     } else {
         return (
             <section>
-                <div className='glow-box'>
+                <div className='glow-box' style={{ marginTop: '3%'}}>
                     <h3 className='made-title'>Made Drinks</h3>
                 </div>
+                    
                 <div className='no-drinks-card'>
-                    <img className='no-made-image' src={emptyImage}></img>
+                    <p className='no-made-text'>You haven't made any drinks yet... mix it up!</p>
+                    {/* <img className='no-made-image' src={emptyImage}></img> */}
                 </div>
             </section>
         )
