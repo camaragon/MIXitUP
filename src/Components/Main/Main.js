@@ -2,11 +2,14 @@ import './Main.css';
 import Cocktail from '../Cocktail/Cocktail';
 import flameImage from '../../Assets/flame-cocktail.jpg';
 
-const Main = ({generateCocktail, cocktail, makeDrink, tip}) => {
+const Main = ({generateCocktail, cocktail, makeDrink, tip, sameDrink}) => {
     return (
         <main className='main'>
             <div className='glow-box'>
-                <h3 className='bartend-tips'>{tip}</h3>
+                {sameDrink ?
+                <h3 style={{ color: 'red' }}>You've already made this drink!</h3> :
+                <h3 className='bartend-tips' style={{ color: '#07F01E' }}>{tip}</h3>
+                }
             </div>
             {cocktail ?
             <Cocktail 
