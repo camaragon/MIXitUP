@@ -130,7 +130,7 @@ describe('Homepage', () => {
         .get('a').should('have.attr', 'href', 'https://mycustombottleopener.com/10-essential-bar-tools-that-every-bartender-should-have/')
     })
 
-    it('Should be able to take user to the drink recipe page whe the drink recipe button is clicked', () => {
+    it('Should be able to take user to the drink recipe page when the drink recipe button is clicked', () => {
         cy
         .get('.generate-cocktail').click()
         .get('.cocktail-card').within(() => {
