@@ -59,6 +59,7 @@ class App extends Component {
     const madeIds = this.state.madeDrinks.map(each => each.map(drink => drink.idDrink));
     if (!madeIds.flat().includes(this.state.cocktail[0].idDrink)) {
       this.setState({ madeDrinks: [this.state.cocktail, ...this.state.madeDrinks]});
+      ls.set('madeDrinks', [this.state.cocktail, ...this.state.madeDrinks]);
     } else {
       this.setState({ sameDrink: true });
     }
