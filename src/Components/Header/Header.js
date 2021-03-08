@@ -17,13 +17,13 @@ const Header = ({currentLevel, drinksMade, levelNum}) => {
                     }
                 </div>
                 <h1>MIX it UP</h1>
-                <h4 className='header-quote'>
+                <h2 style={{ fontSize: '100%'}} className='header-quote'>
                     Level Up Your Bartending Skills! 
                 <br></br>
                     For every 3 drinks made you level up!
                 <br></br>
                     Only select Make Drink if you really made the drink!
-                </h4>     
+                </h2>     
             </header>
         )
 }
