@@ -41,3 +41,22 @@
     margin-top: 0;
 
 }
+
+    @media screen and (max-width: 900px) {
+    .cocktail-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 400px;
+        width: 400px;
+        /* border: 1px solid; */
+        /* border-radius: 10px; */
+        border-radius: 50px;
+        background: #1A1A1A;
+        box-shadow:  35px 35px 10px #0d0d0d,
+                    -35px -10px 20px #272727;
+        padding: 2%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+}
