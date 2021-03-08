@@ -21,7 +21,7 @@ const Main = ({generateCocktail, cocktail, makeDrink, tip, sameDrink, resetGame}
                 makeDrink={makeDrink}
             /> :
             <div className='no-card'>
-                <img className='flame-image' src={flameImage}></img>
+                <img className='flame-image' src={flameImage} alt='woman making a cocktail with blue flames'></img>
             </div> }
             <div className='button-container'>
                 <button onClick={resetGame}>Start Over</button>
