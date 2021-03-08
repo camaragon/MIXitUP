@@ -39,7 +39,8 @@ const tipsData = [
     'Smile and be friendly',
     'Always clean your tins after each drink',
     'Use a jigger',
-    'Make a complex drink in batches'
+    'Make a complex drink in batches',
+    'A great bartender can make anything'
 ]
 
 export {levelData, tipsData};
