@@ -44,7 +44,7 @@ describe('Cocktail Recipe', () => {
         .get('.recipe-info').should('be.visible')
     })
 
-    it('Should contain the name of the drink in the recipe', () => {
+    it('Should display the name of the drink in the recipe', () => {
         cy
         .get('.generate-cocktail').click()
         .get('.cocktail-card').within(() => {
@@ -56,7 +56,7 @@ describe('Cocktail Recipe', () => {
         })
     })
 
-    it('Should contain the category of drink in the recipe', () => {
+    it('Should display the category of the drink in the recipe', () => {
         cy
         .get('.generate-cocktail').click()
         .get('.cocktail-card').within(() => {
@@ -65,6 +65,42 @@ describe('Cocktail Recipe', () => {
         })
         .get('.recipe-info').within(() => {
              cy.get('.recipe-category').should('be.visible')
+        })
+    })
+
+    it('Should display the glass type of the drink in the recipe', () => {
+        cy
+        .get('.generate-cocktail').click()
+        .get('.cocktail-card').within(() => {
+            cy
+            .get('.drink-recipe-btn').click()
+        })
+        .get('.recipe-info').within(() => {
+             cy.get('.recipe-glass').should('be.visible')
+        })
+    })
+
+    it('Should display the ingredients of the drink in the recipe', () => {
+        cy
+        .get('.generate-cocktail').click()
+        .get('.cocktail-card').within(() => {
+            cy
+            .get('.drink-recipe-btn').click()
+        })
+        .get('.recipe-info').within(() => {
+             cy.get('.recipe-ingredients').should('be.visible')
+        })
+    })
+
+    it('Should display the instructions of how to make the drink in the recipe', () => {
+        cy
+        .get('.generate-cocktail').click()
+        .get('.cocktail-card').within(() => {
+            cy
+            .get('.drink-recipe-btn').click()
+        })
+        .get('.recipe-info').within(() => {
+             cy.get('.recipe-instructions').should('be.visible')
         })
     })
 
