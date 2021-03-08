@@ -5,7 +5,7 @@ section {
     /* justify-content: space-around; */
     grid-area: sidebar;
     border-right: solid 3px #C600FF;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .made-title {
