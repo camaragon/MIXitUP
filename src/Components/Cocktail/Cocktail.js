@@ -12,7 +12,7 @@ const Cocktail = ({cocktail, name, category, image, id, makeDrink}) => {
                     <p className='random-category'>{category}</p>
                 </div>
                 <Link to={`/${id}`} >
-                    <button>Drink Recipe</button>
+                    <button className='drink-recipe-btn'>Drink Recipe</button>
                 </Link>
             </div>
         </div> 

@@ -32,4 +32,35 @@ describe('Homepage', () => {
         .get('.generate-cocktail').click()
         .get('.cocktail-card').should('be.visible')
     })
+
+    it('Should be able to diplay buttons and cocktail info on cocktail card', () => {
+        cy
+        .get('.generate-cocktail').click()
+        .get('.cocktail-card').within(() => {
+            cy
+            .get('.cocktail-image').should('be.visible')
+            .get('h3').should('be.visible')
+            .get('p').should('be.visible')
+            .get('button').contains('Make Drink')
+            .get('button').contains('Drink Recipe')
+        })
+    })
+
+    it('Should be able to take user to the drink recipe page whe the drink recipe button is clicked', () => {
+        cy
+        .get('.generate-cocktail').click()
+        .get('.cocktail-card').within(() => {
+            cy
+            .get('.drink-recipe-btn').click()
+        })
+    })
+
+    it('Should be able to take user to the drink recipe page whe the drink recipe button is clicked', () => {
+        cy
+        .get('.generate-cocktail').click()
+        .get('.cocktail-card').within(() => {
+            cy
+            .get('.drink-recipe-btn').click()
+        })
+    })
 })
