@@ -41,4 +41,40 @@ describe('Homepage', () => {
             cy.get('.header-quote').contains('Level Up Your Bartending Skills!For every 3 drinks made you level up!Only select Make Drink if you really made the drink!')
         })
     })
+
+    it('Should display a heading in the side bar', () => {
+        cy
+        .get('section').within(() => {
+            cy.get('h3').contains('Made Drinks')
+        })
+    })
+
+    it('Should display an image showing empty in the side bar', () => {
+        cy
+        .get('section').within(() => {
+            cy.get('img').should('be.visible')
+        })
+    })
+
+    it('Should display instructions on how to start', () => {
+        cy
+        .get('main').within(() => {
+            cy.get('h3').contains('Click Generate a Cocktail to get started!')
+        })
+    })
+
+    it('Should display image of a bartender making a drink with blue flames', () => {
+        cy
+        .get('main').within(() => {
+            cy.get('img').should('be.visible')
+        })
+    })
+
+    it('Should display two buttons uderneath the bartender image', () => {
+        cy
+        .get('main').within(() => {
+            cy.get('button').contains('Recommended Tools')
+            cy.get('button').contains('Generate a Cocktail')
+        })
+    })
 })
