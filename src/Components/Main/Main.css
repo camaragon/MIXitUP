@@ -66,6 +66,26 @@ button:hover {
       box-shadow:  35px 35px 10px #0d0d0d,
                -35px -10px 20px #272727;
     }
+
+    .button-container {
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .no-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 420px;
+        width: 500px;
+        border-radius: 50px;
+        background: #1A1A1A;
+        box-shadow:  35px 35px 10px #0d0d0d,
+                 -35px -10px 20px #272727;
+      }  
   }
 
     
