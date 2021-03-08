@@ -39,7 +39,7 @@ describe('Homepage', () => {
         .get('.bartend-tips').should('be.visible')
     })
 
-    it('Should be able to diplay buttons and cocktail info on cocktail card', () => {
+    it('Should be able to display buttons and cocktail info on cocktail card', () => {
         cy
         .get('.generate-cocktail').click()
         .get('.cocktail-card').within(() => {
@@ -52,15 +52,7 @@ describe('Homepage', () => {
         })
     })
 
-    it('Should be able to take user to the drink recipe page whe the drink recipe button is clicked', () => {
-        cy
-        .get('.generate-cocktail').click()
-        .get('.cocktail-card').within(() => {
-            cy
-            .get('.drink-recipe-btn').click()
-        })
-    })
-
+    
     it('Should be able to make drink and see it move to the made drinks section', () => {
         cy
         .get('.generate-cocktail').click()
@@ -73,7 +65,7 @@ describe('Homepage', () => {
             .get('.made-drink-card').should('be.visible')
         })
     })
-
+    
     it('Should display a made drink card with name and image', () => {
         cy
         .get('.generate-cocktail').click()
@@ -90,7 +82,7 @@ describe('Homepage', () => {
             })
         })
     })
-
+    
     it('Should be able to display multiple made drink cards', () => {
         cy
         .get('.generate-cocktail').click()
@@ -111,7 +103,7 @@ describe('Homepage', () => {
             })
         })
     })
-
+    
     it('Should alert the user if they\'re trying to make a drink they already made', () => {
         cy
         .get('.generate-cocktail').click()
@@ -122,7 +114,7 @@ describe('Homepage', () => {
         })
         .get('.same-drink-error').contains('You\'ve already made this drink!')
     })
-
+    
     it('Should see the progress bar move when a drink is made', () => {
         cy
         .get('.generate-cocktail').click()
@@ -132,4 +124,19 @@ describe('Homepage', () => {
         })
         .get('progress[value=1]').should('be.visible')
     })
+    
+    it('Should have a link to the bartending tools site attatched to reccomened tools button', () => {
+        cy
+        .get('a').should('have.attr', 'href', 'https://mycustombottleopener.com/10-essential-bar-tools-that-every-bartender-should-have/')
+    })
+
+    it('Should be able to take user to the drink recipe page whe the drink recipe button is clicked', () => {
+        cy
+        .get('.generate-cocktail').click()
+        .get('.cocktail-card').within(() => {
+            cy
+            .get('.drink-recipe-btn').click()
+        })
+    })
+
 })
