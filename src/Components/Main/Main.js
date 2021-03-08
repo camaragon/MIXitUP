@@ -24,7 +24,7 @@ const Main = ({generateCocktail, cocktail, makeDrink, tip}) => {
                 <a href='https://mycustombottleopener.com/10-essential-bar-tools-that-every-bartender-should-have/' target="_blank" rel="noreferrer">
                     <button>Recommended Tools</button>
                 </a>
-                <button onClick={generateCocktail}>Generate a Cocktail</button>
+                <button className='generate-cocktail' onClick={generateCocktail}>Generate a Cocktail</button>
             </div>
         </main>
     )

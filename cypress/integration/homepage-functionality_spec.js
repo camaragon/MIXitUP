@@ -14,4 +14,22 @@ describe('Homepage', () => {
         cy
         .visit(baseUrl);
     });
+
+    it('Should be able to fetch GET the random cocktail from the API', () => {
+        cy
+        .intercept('GET', '/api/json/v1/1/random.php').as('getRandomCocktail')
+        .get('.generate-cocktail').click()
+        cy
+        .wait('@getRandomCocktail')
+        .then(({request, response}) => {
+            expect(response.statusCode).to.eq(200)
+        })
+        
+    })
+
+    it('Should be able to display a random coktail when button is clicked', () => {
+        cy
+        .get('.generate-cocktail').click()
+        .get('.cocktail-card').should('be.visible')
+    })
 })
