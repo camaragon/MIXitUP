@@ -55,12 +55,28 @@ describe('Homepage', () => {
         })
     })
 
-    it('Should be able to take user to the drink recipe page whe the drink recipe button is clicked', () => {
+    it('Should be able to make drink and see it move to the made drinks section', () => {
         cy
         .get('.generate-cocktail').click()
         .get('.cocktail-card').within(() => {
             cy
-            .get('.drink-recipe-btn').click()
+            .get('.make-drink-btn').click()
+        })
+        cy.get('section').within(() => {
+            cy
+            .get('.made-drink-card').should('be.visible')
+        })
+    })
+
+    it('Should be display a made drink card with name and image', () => {
+        cy
+        .get('section').within(() => {
+            cy
+            .get('.made-drink-card').within(() => {
+                cy
+                .get('h3').should('be.visible')
+                .get('.made-image').should('be.visible')
+            })
         })
     })
 })
