@@ -5,7 +5,7 @@ section {
     /* justify-content: space-around; */
     grid-area: sidebar;
     border-right: solid 3px #C600FF;
-    overflow: auto;
+    overflow-y: scroll;
 }
 
 .made-title {
@@ -62,4 +62,16 @@ section {
     color: #0CF1FA;
     font-size: 2rem;
     margin: 10%;
+}
+
+@media screen and (max-width: 900px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: space-around; */
+        grid-area: sidebar;
+        border-right: solid 3px #C600FF;
+        overflow-y: visible;
+    }
 }
