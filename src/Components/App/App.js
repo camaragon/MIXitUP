@@ -31,9 +31,14 @@ class App extends Component {
     })
   }
 
+  resetGame = () => {
+    localStorage.clear();
+    window.location.reload(false);
+  }
+
   componentDidUpdate = () => {
     if (this.state.madeDrinks.length === 15) {
-      window.location.reload(false);
+      this.resetGame();
     }
     if (this.state.levelUp) {
       this.setState({
@@ -74,7 +79,7 @@ class App extends Component {
           return (
           <>
             <Sidebar drinks={this.state.madeDrinks} />
-            <Main generateCocktail={this.generateCocktail} cocktail={this.state.cocktail} makeDrink={this.makeDrink} tip={this.state.tip} sameDrink={this.state.sameDrink}/>
+            <Main generateCocktail={this.generateCocktail} cocktail={this.state.cocktail} makeDrink={this.makeDrink} tip={this.state.tip} sameDrink={this.state.sameDrink} resetGame={this.resetGame}/>
           </>
           )
         }}/>

@@ -2,7 +2,7 @@ import './Main.css';
 import Cocktail from '../Cocktail/Cocktail';
 import flameImage from '../../Assets/flame-cocktail.jpg';
 
-const Main = ({generateCocktail, cocktail, makeDrink, tip, sameDrink}) => {
+const Main = ({generateCocktail, cocktail, makeDrink, tip, sameDrink, resetGame}) => {
     return (
         <main className='main'>
             <div className='glow-box'>
@@ -24,6 +24,7 @@ const Main = ({generateCocktail, cocktail, makeDrink, tip, sameDrink}) => {
                 <img className='flame-image' src={flameImage}></img>
             </div> }
             <div className='button-container'>
+                <button onClick={resetGame}>Start Over</button>
                 <a href='https://mycustombottleopener.com/10-essential-bar-tools-that-every-bartender-should-have/' target="_blank" rel="noreferrer">
                     <button className='rec-tools-btn'>Recommended Tools</button>
                 </a>
