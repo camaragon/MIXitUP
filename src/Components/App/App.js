@@ -40,6 +40,7 @@ class App extends Component {
         currentLevel: levelData.find(level => level.id === this.state.levelNum),
         levelUp: false
       });
+      ls.set('currentLevel', levelData.find(level => level.id === this.state.levelNum));
     }
     console.log(this.state.tip)
   }
