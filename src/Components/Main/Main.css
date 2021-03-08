@@ -76,7 +76,7 @@ button:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 70%;
+        height: 100%;
         width: 90%;
         border-radius: 50px;
         background: #1A1A1A;
@@ -108,6 +108,10 @@ button:hover {
 
         
     } */
+
+    .bartend-tips {
+        font-size: 100%;
+    }
 
     .button-container {
         display: flex;
