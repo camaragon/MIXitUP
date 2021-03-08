@@ -104,7 +104,7 @@ describe('Cocktail Recipe', () => {
         })
     })
 
-    it.only('Should return the user back to the home page when the Go Back button is clicked', () => {
+    it('Should return the user back to the home page when the Go Back button is clicked', () => {
         cy
         .get('.generate-cocktail').click()
         .get('.cocktail-card').within(() => {
