@@ -34,6 +34,7 @@ body {
   "sidebar main";
   height: 100vh;
   background-color: #1A1A1A;
+  overflow: hidden;
 }
 
 .glow-box {
