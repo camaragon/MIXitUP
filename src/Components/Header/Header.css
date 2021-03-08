@@ -120,6 +120,8 @@ h1 {
       margin-top: 0;
       margin-right: 5%;
       grid-area: title;
+      text-align: center;
+      white-space: nowrap;
   }
 
     .header-quote {
@@ -174,5 +176,11 @@ h1 {
       margin: 0;
       margin-bottom: 3%;
       order: 3;
+  }
+
+  @media screen and (max-width: 400px) {
+    h1 {
+      font-size: 4rem;
+    }
   }
 }

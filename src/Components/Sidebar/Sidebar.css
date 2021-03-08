@@ -103,6 +103,12 @@ section {
             margin-bottom: 5%;
             margin-top: 5%;
         }
+
+        .no-made-text {
+            color: #0CF1FA;
+            font-size: 1.5rem;
+            margin: 10%;
+        }
     }
 
 }
