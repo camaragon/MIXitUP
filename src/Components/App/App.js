@@ -22,6 +22,9 @@ class App extends Component {
   }
 
   componentDidUpdate = () => {
+    if (this.state.madeDrinks.length === 15) {
+      window.location.reload(false);
+    }
     if (this.state.levelUp) {
       this.setState({
         currentLevel: levelData.find(level => level.id === this.state.count),
@@ -53,7 +56,7 @@ class App extends Component {
   render = () => {
     return (
       <>
-        <Header currentLevel={this.state.currentLevel} drinksMade={this.state.madeDrinks.flat()}/>
+        <Header currentLevel={this.state.currentLevel} drinksMade={this.state.madeDrinks.flat()} levelNum={this.state.count}/>
         <Route exact path='/' render={() => {
           return (
           <>

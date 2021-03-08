@@ -1,7 +1,7 @@
 import './Header.css';
 import userImage from '../../Assets/user-profile.png';
 
-const Header = ({currentLevel, drinksMade}) => {
+const Header = ({currentLevel, drinksMade, levelNum}) => {
         return (   
             <header>
                 <div className='user-profile'>
@@ -9,8 +9,8 @@ const Header = ({currentLevel, drinksMade}) => {
                     {drinksMade.length % 3 === 0 && drinksMade.length  ?
                      <h4 style={{color: '#0CF1FA', fontSize: '2rem'}}>You Leveled Up!</h4> :
                     <div className='user-info'>
-                        <p>Bartender Name</p>
-                        <p>{currentLevel.levelName}</p>
+                        <p>Leta Keane</p>
+                        <p>Level {levelNum} - {currentLevel.levelName}</p>
                         <progress value={drinksMade.length % 3} max={currentLevel.drinkReqs[currentLevel.drinkReqs.length - 1]}/>
                     </div>
                     }
