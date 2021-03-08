@@ -73,8 +73,11 @@ describe('Homepage', () => {
     it('Should display two buttons uderneath the bartender image', () => {
         cy
         .get('main').within(() => {
-            cy.get('button').contains('Recommended Tools')
-            cy.get('button').contains('Generate a Cocktail')
+            cy
+            .get('button').contains('Recommended Tools')
+            .get('button').contains('Generate a Cocktail')
         })
     })
+
+    
 })

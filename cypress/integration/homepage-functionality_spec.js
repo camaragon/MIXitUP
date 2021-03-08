@@ -27,10 +27,16 @@ describe('Homepage', () => {
         
     })
 
-    it('Should be able to display a random coktail when button is clicked', () => {
+    it('Should be able to display a random cocktail when generate cocktail button is clicked', () => {
         cy
         .get('.generate-cocktail').click()
         .get('.cocktail-card').should('be.visible')
+    })
+
+    it('Should be able to display a random bartending tip when generate cocktail button is clicked', () => {
+        cy
+        .get('.generate-cocktail').click()
+        .get('.bartend-tips').should('be.visible')
     })
 
     it('Should be able to diplay buttons and cocktail info on cocktail card', () => {
@@ -68,8 +74,13 @@ describe('Homepage', () => {
         })
     })
 
-    it('Should be display a made drink card with name and image', () => {
+    it('Should display a made drink card with name and image', () => {
         cy
+        .get('.generate-cocktail').click()
+        .get('.cocktail-card').within(() => {
+            cy
+            .get('.make-drink-btn').click()
+        })
         .get('section').within(() => {
             cy
             .get('.made-drink-card').within(() => {
@@ -78,5 +89,47 @@ describe('Homepage', () => {
                 .get('.made-image').should('be.visible')
             })
         })
+    })
+
+    it('Should be able to display multiple made drink cards', () => {
+        cy
+        .get('.generate-cocktail').click()
+        .get('.cocktail-card').within(() => {
+            cy
+            .get('.make-drink-btn').click()
+        })
+        .get('.generate-cocktail').click().wait(500)
+        .get('.cocktail-card').within(() => {
+            cy
+            .get('.make-drink-btn').click()
+        })
+        .get('section').within(() => {
+            cy
+            .get('.made-drink-card')
+            .should(($made_drink_card) => {
+                expect($made_drink_card).to.have.length(2)
+            })
+        })
+    })
+
+    it('Should alert the user if they\'re trying to make a drink they already made', () => {
+        cy
+        .get('.generate-cocktail').click()
+        .get('.cocktail-card').within(() => {
+            cy
+            .get('.make-drink-btn').click()
+            .get('.make-drink-btn').click()
+        })
+        .get('.same-drink-error').contains('You\'ve already made this drink!')
+    })
+
+    it('Should see the progress bar move when a drink is made', () => {
+        cy
+        .get('.generate-cocktail').click()
+        .get('.cocktail-card').within(() => {
+            cy
+            .get('.make-drink-btn').click()
+        })
+        .get('progress[value=1]').should('be.visible')
     })
 })

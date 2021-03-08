@@ -7,7 +7,7 @@ const Main = ({generateCocktail, cocktail, makeDrink, tip, sameDrink}) => {
         <main className='main'>
             <div className='glow-box'>
                 {sameDrink ?
-                <h3 style={{ color: 'red' }}>You've already made this drink!</h3> :
+                <h3 className='same-drink-error' style={{ color: 'red' }}>You've already made this drink!</h3> :
                 <h3 className='bartend-tips' style={{ color: '#07F01E' }}>{tip}</h3>
                 }
             </div>
