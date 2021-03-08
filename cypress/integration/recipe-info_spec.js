@@ -24,4 +24,49 @@ describe('Cocktail Recipe', () => {
         })
     })
 
+    it('Should display an enlarged image of the drink on the recipe page', () => {
+        cy
+        .get('.generate-cocktail').click()
+        .get('.cocktail-card').within(() => {
+            cy
+            .get('.drink-recipe-btn').click()
+        })
+        .get('.recipe-image').should('be.visible')
+    })
+
+    it('Should display a section with the recipe info', () => {
+        cy
+        .get('.generate-cocktail').click()
+        .get('.cocktail-card').within(() => {
+            cy
+            .get('.drink-recipe-btn').click()
+        })
+        .get('.recipe-info').should('be.visible')
+    })
+
+    it('Should contain the name of the drink in the recipe', () => {
+        cy
+        .get('.generate-cocktail').click()
+        .get('.cocktail-card').within(() => {
+            cy
+            .get('.drink-recipe-btn').click()
+        })
+        .get('.recipe-info').within(() => {
+             cy.get('.recipe-name').should('be.visible')
+        })
+    })
+
+    it('Should contain the category of drink in the recipe', () => {
+        cy
+        .get('.generate-cocktail').click()
+        .get('.cocktail-card').within(() => {
+            cy
+            .get('.drink-recipe-btn').click()
+        })
+        .get('.recipe-info').within(() => {
+             cy.get('.recipe-category').should('be.visible')
+        })
+    })
+
+
 })
