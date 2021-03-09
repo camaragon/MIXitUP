@@ -69,12 +69,9 @@ http://localhost:3000/
 ## Usage
 
 ### Generate a random cocktail
-
 * The random cocktail is fetched from the TheCocktailDB API
   ![All Crops](https://i.gyazo.com/759ef01571568c249234660fde2ae274.jpg)
 
-
-  
 
 ### View the recipe of the current cocktail
   * The recipe is given including instructions on how to make the cocktail
@@ -84,6 +81,13 @@ http://localhost:3000/
 ### Make a cocktail and see yourself gain experience points
   * When a user makes a drink in real life they can select Make Drink and will be given experience points
   ![Remove from My Garden](https://i.gyazo.com/5a2811c08cb3c35734384d915d3e907f.jpg)
+  
+  
+### Contains a 'Recommended Tools' button that leads to an article about essential bartending tools
+
+
+### 'Start Over' button resets the games local storage and allows the user to start fresh
+
 
 <!-- ROADMAP -->
 ## Roadmap
