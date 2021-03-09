@@ -1,7 +1,11 @@
 import './Sidebar.css';
-import emptyImage from '../../Assets/empty.jpg';
+import PropTypes from 'prop-types';
 
 const Sidebar = ({drinks}) => {
+    Sidebar.propTypes = {
+        drinks: PropTypes.array
+    }
+    
     if (drinks.length) {
         const madeDrinkCards = drinks.map(drink => {
             return ( 
@@ -28,7 +32,6 @@ const Sidebar = ({drinks}) => {
                     
                 <div className='no-drinks-card'>
                     <p className='no-made-text'>You haven't made any drinks yet... mix it up!</p>
-                    {/* <img className='no-made-image' src={emptyImage}></img> */}
                 </div>
             </section>
         )

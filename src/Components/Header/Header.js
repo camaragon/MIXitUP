@@ -1,8 +1,14 @@
 import './Header.css';
 import userImage from '../../Assets/user-profile.png';
+import PropTypes from 'prop-types';
 
 const Header = ({currentLevel, drinksMade, levelNum}) => {
-    console.log(levelNum)
+    Header.propTypes = {
+        currentLevel: PropTypes.object,
+        drinksMade: PropTypes.array,
+        levelNum: PropTypes.number
+    }
+
         return (   
             <header>
                 <div className='user-profile'>

@@ -1,8 +1,18 @@
 import './Main.css';
 import Cocktail from '../Cocktail/Cocktail';
 import flameImage from '../../Assets/flame-cocktail.jpg';
+import PropTypes from 'prop-types';
 
 const Main = ({generateCocktail, cocktail, makeDrink, tip, sameDrink, resetGame}) => {
+    Main.propTypes = {
+        generateCocktail: PropTypes.func,
+        cocktail: PropTypes.array,
+        makeDrink: PropTypes.func,
+        tip: PropTypes.string,
+        sameDrink: PropTypes.bool,
+        resetGame: PropTypes.func
+    }
+    
     return (
         <main className='main'>
             <div className='glow-box'>
@@ -24,7 +34,7 @@ const Main = ({generateCocktail, cocktail, makeDrink, tip, sameDrink, resetGame}
                 <img className='flame-image' src={flameImage} alt='woman making a cocktail with blue flames'></img>
             </div> }
             <div className='button-container'>
-                <button onClick={resetGame}>Start Over</button>
+                <button className='start-over-btn' onClick={resetGame}>Start Over</button>
                 <a href='https://mycustombottleopener.com/10-essential-bar-tools-that-every-bartender-should-have/' target="_blank" rel="noreferrer">
                     <button className='rec-tools-btn'>Recommended Tools</button>
                 </a>

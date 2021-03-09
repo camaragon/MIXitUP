@@ -1,7 +1,17 @@
 import {Link} from 'react-router-dom';
 import './Recipe.css';
+import PropTypes from 'prop-types';
 
 const Recipe = ({name, image, category, glass, instructions, ingredients}) => {
+    Recipe.propTypes = {
+        name: PropTypes.string,
+        image: PropTypes.string,
+        category: PropTypes.string,
+        glass: PropTypes.string,
+        instructions: PropTypes.string,
+        ingredients: PropTypes.array
+    }
+
     return (
         <div className='recipe'>
             <img className='recipe-image' src={image} alt={`image of a ${name} cocktail`}></img>

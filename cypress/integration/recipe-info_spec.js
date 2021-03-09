@@ -52,7 +52,8 @@ describe('Cocktail Recipe', () => {
             .get('.drink-recipe-btn').click()
         })
         .get('.recipe-info').within(() => {
-             cy.get('.recipe-name').should('be.visible')
+             cy
+             .get('.recipe-name').should('be.visible')
         })
     })
 
@@ -64,7 +65,8 @@ describe('Cocktail Recipe', () => {
             .get('.drink-recipe-btn').click()
         })
         .get('.recipe-info').within(() => {
-             cy.get('.recipe-category').should('be.visible')
+             cy
+             .get('.recipe-category').should('be.visible')
         })
     })
 
@@ -76,7 +78,8 @@ describe('Cocktail Recipe', () => {
             .get('.drink-recipe-btn').click()
         })
         .get('.recipe-info').within(() => {
-             cy.get('.recipe-glass').should('be.visible')
+             cy
+             .get('.recipe-glass').should('be.visible')
         })
     })
 
@@ -88,7 +91,8 @@ describe('Cocktail Recipe', () => {
             .get('.drink-recipe-btn').click()
         })
         .get('.recipe-info').within(() => {
-             cy.get('.recipe-ingredients').should('be.visible')
+             cy
+             .get('.recipe-ingredients').should('be.visible')
         })
     })
 
@@ -100,7 +104,8 @@ describe('Cocktail Recipe', () => {
             .get('.drink-recipe-btn').click()
         })
         .get('.recipe-info').within(() => {
-             cy.get('.recipe-instructions').should('be.visible')
+             cy
+             .get('.recipe-instructions').should('be.visible')
         })
     })
 
@@ -112,7 +117,8 @@ describe('Cocktail Recipe', () => {
             .get('.drink-recipe-btn').click()
         })
         .get('.recipe-info').within(() => {
-             cy.get('button').click()
+             cy
+             .get('button').click()
         })
     })
 

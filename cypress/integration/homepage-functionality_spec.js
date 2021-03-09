@@ -124,6 +124,20 @@ describe('Homepage', () => {
         })
         .get('progress[value=1]').should('be.visible')
     })
+
+    it('Should be able to reset made drinks and user progress when the Start Over button is clicked', () => {
+        cy
+        .get('.generate-cocktail').click()
+        .get('.cocktail-card').within(() => {
+            cy
+            .get('.make-drink-btn').click()
+        })
+        .get('.made-drink-card').should('be.visible')
+        .get('progress[value=1]').should('be.visible')
+        .get('.start-over-btn').click()
+        .get('progress[value=0]').should('be.visible')
+        .get('.no-drinks-card').should('be.visible')
+    })
     
     it('Should have a link to the bartending tools site attatched to reccomened tools button', () => {
         cy
