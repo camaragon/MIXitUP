@@ -13,7 +13,7 @@ const Cocktail = ({name, category, image, id, makeDrink}) => {
     
     return (
         <div className='cocktail-card'>
-            <img className='cocktail-image' src={image} alt={`image of a ${name} cocktail`}></img>
+            <img className='cocktail-image' src={image} alt={`${name} cocktail`}></img>
             <div className='horizontal'>
                 <button className='make-drink-btn' onClick={makeDrink}>Make Drink</button>
                 <div className='stacked'>

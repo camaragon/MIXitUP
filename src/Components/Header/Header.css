@@ -7,9 +7,22 @@ header {
 }
 
 header p{
-    color: #0CF1FA;
+  color: #0CF1FA;
 }
 
+h1 {
+  color: #07F01E;
+  font-size: 6rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.header-quote {
+  color: #0CF1FA;
+  margin-right: 5%;
+  text-align: center;
+  font-size: 100%;
+}
 
 .user-profile {
     display: flex;
@@ -31,8 +44,6 @@ header p{
 
 progress {
     border: none;
-    /* width: 400px;
-    height: 60px; */
     border: 1px solid #C600FF;
     background: #0CF1FA;
   }
@@ -57,35 +68,20 @@ progress {
     background: black;
   }
 
-
-h1 {
-    color: #07F01E;
-    font-size: 6rem;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-.header-quote {
-    color: #0CF1FA;
-    margin-right: 5%;
-    text-align: center;
-    font-size: 100%;
-}
-
   @media screen and (max-width: 1250px) {
     h1 {
       color: #07F01E;
       font-size: 4rem;
       margin-bottom: 0;
       margin-top: 0;
-  }
+    }
 
     .header-quote {
       color: #0CF1FA;
       margin-right: 5%;
       text-align: center;
       font-size: 90%;
-  } 
+    } 
 }
 
   @media screen and (max-width: 1000px) {
@@ -94,14 +90,14 @@ h1 {
       font-size: 3rem;
       margin-bottom: 0;
       margin-top: 0;
-  }
+    }
 
     .header-quote {
       color: #0CF1FA;
       margin-right: 3%;
       text-align: center;
       font-size: 80%;
-  } 
+    } 
 }
 
   @media screen and (max-width: 900px) {
@@ -112,7 +108,7 @@ h1 {
       'quote quote';
       grid-area: header;
       border-bottom: solid 5px #C600FF;
-  }
+    }
     h1 {
       color: #07F01E;
       font-size: 5rem;
@@ -122,7 +118,7 @@ h1 {
       grid-area: title;
       text-align: center;
       white-space: nowrap;
-  }
+    }
 
     .header-quote {
       color: #0CF1FA;
@@ -131,35 +127,30 @@ h1 {
       text-align: center;
       font-size: 100%;
       grid-area: quote;
-  } 
+    } 
 
     .user-profile {
       display: flex;
       margin-left: 5%;
       margin-top: 5%;
       grid-area: profile;
-  }
+    }
 }
 
-  @media screen and (max-width: 700px) {
+@media screen and (max-width: 700px) {
     header {
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* display: grid;
-      grid-template-areas: 
-      'title'
-      'quote'
-      'profile'; */
       grid-area: header;
       border-bottom: solid 5px #C600FF;
-  }
+    }
     h1 {
       color: #07F01E;
       font-size: 5rem;
       margin: 0;
       order: 1;
-  }
+    }
 
     .header-quote {
       color: #0CF1FA;
@@ -169,16 +160,17 @@ h1 {
       text-align: center;
       font-size: 100%;
       order: 2;
-  } 
+    } 
 
     .user-profile {
       display: flex;
       margin: 0;
       margin-bottom: 3%;
       order: 3;
-  }
+    }
+}
 
-  @media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {
     h1 {
       font-size: 4rem;
     }
@@ -186,5 +178,4 @@ h1 {
     .header-quote {
       font-size: 80%;
     }
-  }
 }

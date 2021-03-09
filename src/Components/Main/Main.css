@@ -6,7 +6,6 @@
     grid-area: main;
 }
 
-
 .button-container {
     display: flex;
     justify-content: space-around;
@@ -18,13 +17,10 @@ button {
     border: none;
     color: #00d2c6;
     background-color: #1A1A1A;
-    /* border: 1px solid #00d2c6; */
     border-radius: 45px;
     box-shadow: 0px 4px 12px #00d2c6;
     transition: all 0.3s ease 0s;
     cursor: pointer;
-    /* outline: none; */
-    
 }
 
 button:hover {
@@ -40,8 +36,6 @@ button:hover {
     align-items: center;
     height: 70%;
     width: 80%;
-    /* border: 1px solid; */
-    /* border-radius: 10px; */
     border-radius: 50px;
     background: #1A1A1A;
     box-shadow:  35px 35px 10px #0d0d0d,
@@ -54,15 +48,15 @@ button:hover {
       border-radius: 50px;
   }
 
-  @media screen and (max-width: 1300px) {
+@media screen and (max-width: 1300px) {
     .button-container {
         display: flex;
         justify-content: space-around;
         width: 70%;
     }
-  }
+}
 
-  @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .main {
         display: flex;
         flex-direction: column;
@@ -92,23 +86,9 @@ button:hover {
         width: 100%;
         margin-bottom: 5%;
     }
-  }
+}
 
-  @media screen and (max-width: 400px) {
-    /* button {
-        height: 100%;
-        border: none;
-        color: #00d2c6;
-        background-color: #1A1A1A;
-
-        border-radius: 45px;
-        box-shadow: 0px 4px 12px #00d2c6;
-        transition: all 0.3s ease 0s;
-        cursor: pointer;
-
-        
-    } */
-
+@media screen and (max-width: 400px) {
     .bartend-tips {
         font-size: 100%;
     }
@@ -125,6 +105,6 @@ button:hover {
     .button-container * {
         margin: 3%;
     }
-  }
+}
 
     

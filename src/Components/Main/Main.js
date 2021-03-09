@@ -32,7 +32,7 @@ const Main = ({generateCocktail, cocktail, makeDrink, tip, sameDrink, resetGame}
             /> :
             <div className='no-card'>
                 <img className='flame-image' src={flameImage} alt='woman making a cocktail with blue flames'></img>
-            </div> }
+            </div>}
             <div className='button-container'>
                 <button className='start-over-btn' onClick={resetGame}>Start Over</button>
                 <a href='https://mycustombottleopener.com/10-essential-bar-tools-that-every-bartender-should-have/' target="_blank" rel="noreferrer">

@@ -2,7 +2,6 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-around; */
     grid-area: sidebar;
     border-right: solid 3px #C600FF;
     overflow-y: auto;
@@ -26,21 +25,10 @@ section {
     margin-top: 5%;
 }
 
-
-/* .made-drink-card * {
-    color: #07F01E;
-} */
-
 .made-image {
     height: 78%;
     width: 90%;
     border-radius: 50px; 
-}
-
-.no-made-image {
-    height: 100%;
-    width: 100%;
-    border-radius: 50px;
 }
 
 .no-drinks-card {
@@ -54,8 +42,13 @@ section {
     background: #1A1A1A;
     box-shadow:  35px 35px 10px #0d0d0d,
              -35px -10px 20px #272727;
-    /* margin-bottom: 10%; */
     margin-top: 5%;
+}
+
+.no-made-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
 }
 
 .no-made-text {
@@ -69,7 +62,6 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* justify-content: space-around; */
         border-right: none;
         grid-area: sidebar;
         overflow-y: visible;
@@ -88,27 +80,26 @@ section {
         margin-bottom: 5%;
         margin-top: 5%;
     }
+}
 
-    @media screen and (max-width: 650px) {
-        .made-drink-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 70%;
-            width: 80%;
-            border-radius: 50px;
-            background: #1A1A1A;
-            box-shadow:  35px 35px 10px #0d0d0d,
-                     -35px -10px 20px #272727;
-            margin-bottom: 5%;
-            margin-top: 5%;
-        }
-
-        .no-made-text {
-            color: #0CF1FA;
-            font-size: 1.5rem;
-            margin: 10%;
-        }
+@media screen and (max-width: 650px) {
+    .made-drink-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 70%;
+        width: 80%;
+        border-radius: 50px;
+        background: #1A1A1A;
+        box-shadow:  35px 35px 10px #0d0d0d,
+                    -35px -10px 20px #272727;
+        margin-bottom: 5%;
+        margin-top: 5%;
     }
 
+    .no-made-text {
+        color: #0CF1FA;
+        font-size: 1.5rem;
+        margin: 10%;
+    }
 }
