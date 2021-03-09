@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import Header from '../Header/Header';
 import Sidebar from '../Sidebar/Sidebar';
 import Main from '../Main/Main';
@@ -7,6 +6,7 @@ import Recipe from '../Recipe/Recipe';
 import {getRandomCocktail} from '../../fetchRequests';
 import {Route} from 'react-router-dom';
 import {levelData, tipsData} from '../../data';
+import './App.css';
 import ls from 'local-storage';
 
 class App extends Component {
@@ -31,11 +31,6 @@ class App extends Component {
     })
   }
 
-  resetGame = () => {
-    localStorage.clear();
-    window.location.reload(false);
-  }
-
   componentDidUpdate = () => {
     if (this.state.madeDrinks.length === 15) {
       this.resetGame();
@@ -47,29 +42,47 @@ class App extends Component {
       });
       ls.set('currentLevel', levelData.find(level => level.id === this.state.levelNum));
     }
-    console.log(this.state.tip)
   }
 
   generateCocktail = () => {
     getRandomCocktail()
     .then(random => {
-      this.setState({sameDrink: false, cocktail: random.drinks, tip: tipsData[Math.floor(Math.random() * tipsData.length)]})
+      this.setState({
+        sameDrink: false, 
+        cocktail: random.drinks, 
+        tip: tipsData[Math.floor(Math.random() * tipsData.length)]
+      });
     })
-    console.log(this.state.cocktail)
   }
 
   makeDrink = () => {
-    if (this.state.madeDrinks.flat().length % 3 === 0 && this.state.madeDrinks.length) {
-      this.setState({ levelUp: true, levelNum: this.state.levelNum + 1});
-      ls.set('levelNum', this.state.levelNum + 1);
-    }
+    this.checkLevelUp();
     const madeIds = this.state.madeDrinks.map(each => each.map(drink => drink.idDrink));
     if (!madeIds.flat().includes(this.state.cocktail[0].idDrink)) {
-      this.setState({ madeDrinks: [this.state.cocktail, ...this.state.madeDrinks]});
+      this.setState({
+        madeDrinks: [this.state.cocktail, ...this.state.madeDrinks]
+      });
       ls.set('madeDrinks', [this.state.cocktail, ...this.state.madeDrinks]);
     } else {
-      this.setState({ sameDrink: true });
+      this.setState({
+        sameDrink: true
+      });
     }
+  }
+
+  checkLevelUp = () => {
+    if (this.state.madeDrinks.flat().length % 3 === 0 && this.state.madeDrinks.length) {
+      this.setState({
+        levelUp: true, 
+        levelNum: this.state.levelNum + 1
+      });
+      ls.set('levelNum', this.state.levelNum + 1);
+    }
+  }
+
+  resetGame = () => {
+    localStorage.clear();
+    window.location.reload(false);
   }
 
   render = () => {
