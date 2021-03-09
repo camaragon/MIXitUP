@@ -7,7 +7,7 @@
 ## Table of Contents
 * [Links](#links)
 * [About the Project](#about-the-project)
-* [Lanugages Used](#languages-used)
+* [Technologies Used](#technologies-used)
 * [Getting Started](#getting-started)
 * [Prerequisites](#prerequisites)
 * [Installation](#installation)
@@ -27,9 +27,9 @@ TheCocktailDB API: [Info](https://www.thecocktaildb.com/api.php)
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-MIX it UP is designed to help beginner bartenders find new cocktails and sharpen their skills of cocktail making. It allows the user to be given a random cocktail and keep track of all their made drinks. They'll gain experince points for every drink made and will level up after every 3 drinks. This project is designed by a fellow bartender that always wished an app like this existed while he was coming up. This utilizes local storage in order to allow the user's level progress and made drinks to be saved upon leaving or refreshing the site.
+MIX it UP is designed to help beginner bartenders find new cocktails and sharpen their skills of cocktail making. It allows the user to be given a random cocktail and keep track of all their made drinks. They'll gain experince points for every drink made and will level up after every 3 drinks made. This project is designed by a fellow bartender that always wished an app like this existed while he was coming up. This utilizes local storage in order to allow the user's level progress and made drinks to be saved upon leaving or refreshing the site.
 
-### Languages Used
+### Technologies Used
 
 * React.js
 * HTML
