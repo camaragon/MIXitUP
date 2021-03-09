@@ -12,7 +12,7 @@ const Header = ({currentLevel, drinksMade, levelNum}) => {
         return (   
             <header>
                 <div className='user-profile'>
-                    <img className='user-image' src={userImage} alt='user profile image'></img>
+                    <img className='user-image' src={userImage} alt='user profile logo'></img>
                     {drinksMade.length % 3 === 0 && drinksMade.length  ?
                         <h4 style={{color: '#0CF1FA', fontSize: '2rem'}}>You Leveled Up!</h4> :
                     <div className='user-info'>
