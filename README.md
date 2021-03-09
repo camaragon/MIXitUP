@@ -20,6 +20,8 @@
 <!-- LINKS -->
 ## Links
 
+Deployed Link: [Here](https://mix-it-up-camaragon.vercel.app/)
+
 Repo Link: [Here](https://github.com/camaragon/MIXitUP)
 
 TheCocktailDB API: [Info](https://www.thecocktaildb.com/api.php)
