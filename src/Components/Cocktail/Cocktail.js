@@ -1,5 +1,6 @@
 import './Cocktail.css';
 import {Link} from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 const Cocktail = ({name, category, image, id, makeDrink}) => {
     return (
@@ -17,6 +18,14 @@ const Cocktail = ({name, category, image, id, makeDrink}) => {
             </div>
         </div> 
     )
+}
+
+Cocktail.propTypes = {
+    name: PropTypes.string,
+    category: PropTypes.string,
+    image: PropTypes.string,
+    id: PropTypes.number,
+    makeDrink: PropTypes.func
 }
 
 export default Cocktail;
