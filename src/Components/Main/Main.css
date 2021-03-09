@@ -38,8 +38,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 420px;
-    width: 800px;
+    height: 70%;
+    width: 80%;
     /* border: 1px solid; */
     /* border-radius: 10px; */
     border-radius: 50px;
@@ -53,3 +53,78 @@ button:hover {
       width: 100%;
       border-radius: 50px;
   }
+
+  @media screen and (max-width: 1300px) {
+    .button-container {
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        grid-area: main;
+        border-bottom: 3px solid #C600FF;
+    }
+
+    .no-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 90%;
+        border-radius: 50px;
+        background: #1A1A1A;
+        box-shadow:  35px 35px 10px #0d0d0d,
+                 -35px -10px 20px #272727;
+        margin-top: 5%;
+        margin-bottom: 5%;
+      }  
+
+      .button-container {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    /* button {
+        height: 100%;
+        border: none;
+        color: #00d2c6;
+        background-color: #1A1A1A;
+
+        border-radius: 45px;
+        box-shadow: 0px 4px 12px #00d2c6;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+
+        
+    } */
+
+    .bartend-tips {
+        font-size: 100%;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .button-container * {
+        margin: 3%;
+    }
+  }
+
+    

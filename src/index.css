@@ -8,6 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: auto;
 }
 
 /* code {
@@ -33,6 +34,7 @@ body {
   "sidebar main";
   height: 100vh;
   background-color: #1A1A1A;
+  overflow: hidden;
 }
 
 .glow-box {
@@ -45,4 +47,33 @@ body {
   border-radius: 50px;
   -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px #00d2c6; 
   box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px #00d2c6;
+}
+
+  @media screen and (max-width: 900px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr; 
+      grid-template-rows: 1fr 4fr;
+      grid-template-areas: 
+      "header header"
+      "main main"
+      "sidebar sidebar";
+      height: 100vh;
+      background-color: #1A1A1A;
+      overflow: auto;
+    }
+
+    .glow-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 2%;
+      padding-left: 2%;
+      width: auto;
+      border-radius: 50px;
+      -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px #00d2c6; 
+      box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px #00d2c6;
+      margin-top: 5%;
+      /* margin-bottom: 5%; */
+    }
 }

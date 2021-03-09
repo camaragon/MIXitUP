@@ -1,10 +1,10 @@
 import './Cocktail.css';
 import {Link} from 'react-router-dom'
 
-const Cocktail = ({cocktail, name, category, image, id, makeDrink}) => {
+const Cocktail = ({name, category, image, id, makeDrink}) => {
     return (
         <div className='cocktail-card'>
-            <img className='cocktail-image' src={image}></img>
+            <img className='cocktail-image' src={image} alt={`image of a ${name} cocktail`}></img>
             <div className='horizontal'>
                 <button className='make-drink-btn' onClick={makeDrink}>Make Drink</button>
                 <div className='stacked'>

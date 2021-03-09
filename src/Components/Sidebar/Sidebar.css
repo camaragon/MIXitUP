@@ -5,7 +5,7 @@ section {
     /* justify-content: space-around; */
     grid-area: sidebar;
     border-right: solid 3px #C600FF;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .made-title {
@@ -62,4 +62,53 @@ section {
     color: #0CF1FA;
     font-size: 2rem;
     margin: 10%;
+}
+
+@media screen and (max-width: 900px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: space-around; */
+        border-right: none;
+        grid-area: sidebar;
+        overflow-y: visible;
+    }
+
+    .made-drink-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 500px;
+        width: 70%;
+        border-radius: 50px;
+        background: #1A1A1A;
+        box-shadow:  35px 35px 10px #0d0d0d,
+                 -35px -10px 20px #272727;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+
+    @media screen and (max-width: 650px) {
+        .made-drink-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 70%;
+            width: 80%;
+            border-radius: 50px;
+            background: #1A1A1A;
+            box-shadow:  35px 35px 10px #0d0d0d,
+                     -35px -10px 20px #272727;
+            margin-bottom: 5%;
+            margin-top: 5%;
+        }
+
+        .no-made-text {
+            color: #0CF1FA;
+            font-size: 1.5rem;
+            margin: 10%;
+        }
+    }
+
 }
