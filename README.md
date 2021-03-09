@@ -5,7 +5,7 @@
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
-* [Repo Link](#repo-link)
+* [Links](#links)
 * [About the Project](#about-the-project)
 * [Lanugages Used](#languages-used)
 * [Getting Started](#getting-started)
@@ -17,10 +17,12 @@
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
-<!-- REPO LINK -->
-## Repo Link
+<!-- LINKS -->
+## Links
 
 Repo Link: [Here](https://github.com/camaragon/MIXitUP)
+
+TheCocktailDB API: [Info](https://www.thecocktaildb.com/api.php)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -86,6 +88,7 @@ http://localhost:3000/
 <!-- ROADMAP -->
 ## Roadmap
 
+See the [open issues](https://github.com/camaragon/MIXitUP/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 ## Contributing
