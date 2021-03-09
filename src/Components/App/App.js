@@ -88,16 +88,28 @@ class App extends Component {
   render = () => {
     return (
       <>
-        <Header currentLevel={this.state.currentLevel} drinksMade={this.state.madeDrinks.flat()} levelNum={this.state.levelNum}/>
+        <Header 
+          currentLevel={this.state.currentLevel} 
+          drinksMade={this.state.madeDrinks.flat()} 
+          levelNum={this.state.levelNum}
+        />
         <Route exact path='/' render={() => {
           return (
           <>
-            <Sidebar drinks={this.state.madeDrinks} />
-            <Main generateCocktail={this.generateCocktail} cocktail={this.state.cocktail} makeDrink={this.makeDrink} tip={this.state.tip} sameDrink={this.state.sameDrink} resetGame={this.resetGame}/>
-          </>
-          )
+            <Sidebar 
+              drinks={this.state.madeDrinks}
+             />
+            <Main 
+              generateCocktail={this.generateCocktail} 
+              cocktail={this.state.cocktail} 
+              makeDrink={this.makeDrink} 
+              tip={this.state.tip} 
+              sameDrink={this.state.sameDrink} 
+              resetGame={this.resetGame}
+            />
+          </>)
         }}/>
-        <Route path='/:id' render={ ( {match} ) => {
+        <Route path='/:id' render={() => {
           return (
           this.state.cocktail &&
             <Recipe
@@ -109,11 +121,11 @@ class App extends Component {
               ingredients={this.state.cocktail[0].strIngredient1 ? 
                 [`${this.state.cocktail[0].strIngredient1} - ${this.state.cocktail[0].strMeasure1}`, `${this.state.cocktail[0].strIngredient2} - ${this.state.cocktail[0].strMeasure2}`, `${this.state.cocktail[0].strIngredient3} - ${this.state.cocktail[0].strMeasure3}`, `${this.state.cocktail[0].strIngredient4} - ${this.state.cocktail[0].strMeasure4}`, `${this.state.cocktail[0].strIngredient5} - ${this.state.cocktail[0].strMeasure5}`, `${this.state.cocktail[0].strIngredient6} - ${this.state.cocktail[0].strMeasure6}`, `${this.state.cocktail[0].strIngredient7} - ${this.state.cocktail[0].strMeasure7}`] 
                 : this.state.cocktail[0].strIngredients}
-            />)}}/>
+            />)}}
+        />
       </> 
     )
-
-  };
+  }
 }
 
 export default App;
