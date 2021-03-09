@@ -83,10 +83,17 @@ http://localhost:3000/
   ![Remove from My Garden](https://i.gyazo.com/5a2811c08cb3c35734384d915d3e907f.jpg)
   
   
-### Contains a 'Recommended Tools' button that leads to an article about essential bartending tools
+  
+  
+  
+### *Contains a 'Recommended Tools' button that leads to an article about essential bartending tools*
 
 
-### 'Start Over' button resets the games local storage and allows the user to start fresh
+
+### *'Start Over' button resets the games local storage and allows the user to start fresh*
+
+
+
 
 
 <!-- ROADMAP -->
