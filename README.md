@@ -89,6 +89,10 @@ http://localhost:3000/
 ### Make a cocktail and see yourself gain experience points
   * When a user makes a drink in real life they can select Make Drink and will be given experience points
   ![Remove from My Garden](https://i.gyazo.com/5a2811c08cb3c35734384d915d3e907f.jpg)
+  
+
+### Fully responsive on all screen sizes
+![Responsiveness GIF](https://media.giphy.com/media/n2YAHZ3cV1kRHIikkI/giphy.gif)
 
 <!-- ROADMAP -->
 ## Roadmap
