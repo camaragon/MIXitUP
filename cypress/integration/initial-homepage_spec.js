@@ -72,14 +72,24 @@ describe('Homepage', () => {
         })
     })
 
-    it('Should display two buttons uderneath the bartender image', () => {
+    it('Should display Recommended Tools button in the main section', () => {
         cy
         .get('main').within(() => {
-            cy
-            .get('button').contains('Recommended Tools')
-            .get('button').contains('Generate a Cocktail')
+            cy.get('button').contains('Recommended Tools')
         })
     })
 
-    
+    it('Should display Generate a Cocktail button in the main section', () => {
+        cy
+        .get('main').within(() => {
+            cy.get('button').contains('Generate a Cocktail')
+        })
+    })
+
+    it('Should display Start Over button in the main section', () => {
+        cy
+        .get('main').within(() => {
+            cy.get('button').contains('Start Over')
+        })
+    })
 })
