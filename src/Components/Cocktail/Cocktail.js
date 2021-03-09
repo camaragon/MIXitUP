@@ -3,6 +3,14 @@ import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types';
 
 const Cocktail = ({name, category, image, id, makeDrink}) => {
+    Cocktail.propTypes = {
+        name: PropTypes.string,
+        category: PropTypes.string,
+        image: PropTypes.string,
+        id: PropTypes.string,
+        makeDrink: PropTypes.func
+    }
+    
     return (
         <div className='cocktail-card'>
             <img className='cocktail-image' src={image} alt={`image of a ${name} cocktail`}></img>
@@ -18,14 +26,6 @@ const Cocktail = ({name, category, image, id, makeDrink}) => {
             </div>
         </div> 
     )
-}
-
-Cocktail.propTypes = {
-    name: PropTypes.string,
-    category: PropTypes.string,
-    image: PropTypes.string,
-    id: PropTypes.number,
-    makeDrink: PropTypes.func
 }
 
 export default Cocktail;

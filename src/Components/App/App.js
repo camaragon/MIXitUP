@@ -55,6 +55,7 @@ class App extends Component {
     .then(random => {
       this.setState({sameDrink: false, cocktail: random.drinks, tip: tipsData[Math.floor(Math.random() * tipsData.length)]})
     })
+    console.log(this.state.cocktail)
   }
 
   makeDrink = () => {

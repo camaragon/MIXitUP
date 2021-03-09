@@ -4,6 +4,15 @@ import flameImage from '../../Assets/flame-cocktail.jpg';
 import PropTypes from 'prop-types';
 
 const Main = ({generateCocktail, cocktail, makeDrink, tip, sameDrink, resetGame}) => {
+    Main.propTypes = {
+        generateCocktail: PropTypes.func,
+        cocktail: PropTypes.array,
+        makeDrink: PropTypes.func,
+        tip: PropTypes.string,
+        sameDrink: PropTypes.bool,
+        resetGame: PropTypes.func
+    }
+    
     return (
         <main className='main'>
             <div className='glow-box'>
@@ -33,15 +42,6 @@ const Main = ({generateCocktail, cocktail, makeDrink, tip, sameDrink, resetGame}
             </div>
         </main>
     )
-}
-
-Main.propTypes = {
-    generateCocktail: PropTypes.func,
-    cocktail: PropTypes.array,
-    makeDrink: PropTypes.func,
-    tip: PropTypes.string,
-    sameDrink: PropTypes.bool,
-    resetGame: PropTypes.func
 }
 
 export default Main;
