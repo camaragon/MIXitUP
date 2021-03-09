@@ -49,10 +49,12 @@ describe('Homepage', () => {
         })
     })
 
-    it('Should display an image showing empty in the side bar', () => {
+    it('Should display a message explaining no made drinks in the side bar', () => {
         cy
         .get('section').within(() => {
-            cy.get('img').should('be.visible')
+            cy.get('.no-drinks-card').within(() => {
+                cy.get('.no-made-text').contains('You haven\'t made any drinks yet... mix it up!')
+            })
         })
     })
 
