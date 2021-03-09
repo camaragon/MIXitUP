@@ -1,7 +1,6 @@
 import {Link} from 'react-router-dom';
 import './Recipe.css';
 import PropTypes from 'prop-types';
-import react, {useState} from 'react';
 
 const Recipe = ({name, image, category, glass, instructions, ingredients}) => {
     Recipe.propTypes = {
@@ -13,6 +12,16 @@ const Recipe = ({name, image, category, glass, instructions, ingredients}) => {
         ingredients: PropTypes.array
     }
 
+    const findIngredients = () => {
+        const allIngredients = [];
+        for (let i = 0; i < ingredients.length; i++) {
+            if (!ingredients[i].includes('null')) {
+                allIngredients.push(<li key={i}>{ingredients[i]}</li>);
+            }
+        }
+        return allIngredients;
+    }
+
     return (
         <div className='recipe'>
             <img className='recipe-image' src={image} alt={`${name} cocktail`}></img>
@@ -21,12 +30,7 @@ const Recipe = ({name, image, category, glass, instructions, ingredients}) => {
                 <p className='recipe-category'>{category}</p>
                 <p className='recipe-glass'> Glass Type: {glass}</p>
                 {Array.isArray(ingredients) ? 
-                    <ul className='recipe-ingredients'>Ingredients: {ingredients.map((ingredient, index) => {
-                        if (!ingredient.includes('null')) {
-                            return <li key={index}>{ingredient}</li>
-                        }
-                    })}
-                    </ul> : 
+                    <ul>{findIngredients()}</ul> :
                     <p className='recipe-ingredients'>Ingredients: {ingredients}</p>}
                     <p className='recipe-instructions'>{instructions}</p>
                     <Link to={'/'}>
