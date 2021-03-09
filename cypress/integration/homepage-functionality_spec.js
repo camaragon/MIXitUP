@@ -24,7 +24,6 @@ describe('Homepage', () => {
         .then(({request, response}) => {
             expect(response.statusCode).to.eq(200)
         })
-        
     })
 
     it('Should be able to display a random cocktail when generate cocktail button is clicked', () => {
