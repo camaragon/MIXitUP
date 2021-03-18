@@ -30,7 +30,7 @@ const Recipe = ({name, image, category, glass, instructions, ingredients}) => {
                 <p className='recipe-category'>{category}</p>
                 <p className='recipe-glass'> Glass Type: {glass}</p>
                 {Array.isArray(ingredients) ? 
-                    <ul>{findIngredients()}</ul> :
+                    <ul className='recipe-ingredients'>{findIngredients()}</ul> :
                     <p className='recipe-ingredients'>Ingredients: {ingredients}</p>}
                     <p className='recipe-instructions'>{instructions}</p>
                     <Link to={'/'}>
